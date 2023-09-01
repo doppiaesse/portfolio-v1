@@ -1,4 +1,5 @@
 <script lang="ts">
+	import FloatingNav from '$lib/components/FloatingNav.svelte';
 	import '../globals.css';
 </script>
 
@@ -16,5 +17,7 @@
 </svelte:head>
 
 <div class="w-[55%] mx-auto my-10">
+	<FloatingNav />
+
 	<slot />
 </div>

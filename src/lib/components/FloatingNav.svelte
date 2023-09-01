@@ -1,0 +1,47 @@
+<script lang="ts">
+	import { fly } from 'svelte/transition';
+
+	const navigation = [
+		{ name: 'About', href: '#about' },
+		{ name: 'Projects', href: '#projects' },
+		{ name: 'Contact', href: '#contact' }
+	];
+
+	function handleAnchorClick(event: any) {
+		event.preventDefault();
+		const link = event.currentTarget;
+		const anchorId = new URL(link.href).hash.replace('#', '');
+		const anchor = document.getElementById(anchorId);
+		if (anchor) {
+			window.scrollTo({
+				top: anchor.offsetTop - 20,
+				behavior: 'smooth'
+			});
+		}
+	}
+
+	let scroll: number;
+	$: show = scroll > 350 ? true : false;
+</script>
+
+<svelte:window bind:scrollY={scroll} />
+
+{#if show}
+	<header
+		class="fixed top-5 left-0 flex w-full justify-center"
+		in:fly={{ y: -30, duration: 300 }}
+		out:fly={{ duration: 300 }}
+	>
+		<nav
+			class="flex border border-white border-opacity-5 rounded-full items-center justify-between text-lg font-light backdrop-blur-sm bg-white bg-opacity-5 px-4"
+		>
+			<a href="#top" class="text-3xl sign px-3 pt-2 pb-[0.6rem]" on:click={handleAnchorClick}>
+				SS
+			</a>
+
+			{#each navigation as item (item.name)}
+				<a href={item.href} class="px-3" on:click={handleAnchorClick}>{item.name}</a>
+			{/each}
+		</nav>
+	</header>
+{/if}

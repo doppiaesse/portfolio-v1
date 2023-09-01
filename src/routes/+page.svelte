@@ -7,7 +7,7 @@
 	<Navbar />
 
 	<div
-		class="flex flex-col justify-center gap-y-5 border-b border-white border-opacity-5 px-12 py-20"
+		class="flex flex-col justify-center gap-y-5 border-b border-white border-opacity-5 px-16 py-20"
 	>
 		<div class="text-7xl">
 			<p>Hello, I'm Simone</p>
@@ -25,7 +25,7 @@
 		</div>
 	</div>
 
-	<div id="about" class="flex flex-col gap-y-10 border-b border-white border-opacity-5 px-12 py-14">
+	<div id="about" class="flex flex-col gap-y-10 border-b border-white border-opacity-5 px-16 py-14">
 		<h2 class="text-6xl leading-none whitespace-nowrap">About me</h2>
 		<div class="text-xl 2xl:text-2xl">
 			Hey there! Nice to meet you.
@@ -43,7 +43,7 @@
 		</div>
 	</div>
 
-	<div id="projects" class="flex flex-col gap-y-10 px-12 py-14">
+	<div id="projects" class="flex flex-col gap-y-10 px-16 py-14">
 		<h2 class="text-6xl font-light leading-none">Projects</h2>
 
 		<div class="basic-grid">
