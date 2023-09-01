@@ -6,7 +6,9 @@
 </script>
 
 <div class="flex justify-center p-3">
-	<div class="shadow-md border border-white border-opacity-10 rounded-3xl">
+	<div
+		class="shadow-md bg-white bg-opacity-[0.01] border border-white border-opacity-10 rounded-3xl"
+	>
 		<a href={link}>
 			<img class="rounded-t-3xl" src={image} alt={title} />
 		</a>
