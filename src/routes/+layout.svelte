@@ -16,7 +16,7 @@
 	<meta name="author" content="Simone Salerno" />
 </svelte:head>
 
-<div class="w-[55%] mx-auto my-10">
+<div class="mx-auto p-3 sm:py-3 sm:px-5 md:py-5 md:px-16 lg:px-40 lg:py-10 xl:px-60 2xl:px-72">
 	<FloatingNav />
 
 	<slot />

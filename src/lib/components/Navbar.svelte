@@ -20,10 +20,10 @@
 </script>
 
 <header class="border-b border-white border-opacity-5 shadow-md">
-	<nav class="flex items-center px-10 py-8 justify-between text-3xl font-light">
-		<a href="#top" class="text-6xl sign -mt-2" on:click={handleAnchorClick}> SS </a>
+	<nav class="flex items-center px-5 md:px-10 py-6 md:py-8 justify-between text-3xl font-light">
+		<a href="#top" class="text-5xl md:text-6xl sign md:-mt-2" on:click={handleAnchorClick}> SS </a>
 
-		<div class="flex gap-x-7">
+		<div class="sm:flex hidden gap-x-7">
 			{#each navigation as item (item.name)}
 				<a href={item.href} on:click={handleAnchorClick}>{item.name}</a>
 			{/each}

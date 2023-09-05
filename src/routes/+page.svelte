@@ -3,17 +3,17 @@
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 </script>
 
-<div class="font-light border border-white border-opacity-5 bg-primary">
+<div id="top" class="font-light border border-white border-opacity-5 bg-primary">
 	<Navbar />
 
 	<div
-		class="flex flex-col justify-center gap-y-5 border-b border-white border-opacity-5 px-16 py-20"
+		class="flex flex-col justify-center gap-y-5 border-b border-white border-opacity-5 px-5 md:px-16 py-16 md:py-20"
 	>
 		<div class="text-7xl">
 			<p>Hello, I'm Simone</p>
 		</div>
 
-		<div class="text-5xl typewriter whitespace-nowrap italic">
+		<div class="text-3xl md:text-5xl typewriter whitespace-nowrap italic">
 			{#await import('$lib/components/Typewriter.svelte')}
 				<div class="flex pb-[0.4rem]">
 					<span class="me-2"> > </span>
@@ -25,8 +25,11 @@
 		</div>
 	</div>
 
-	<div id="about" class="flex flex-col gap-y-10 border-b border-white border-opacity-5 px-16 py-14">
-		<h2 class="text-6xl leading-none whitespace-nowrap">About me</h2>
+	<div
+		id="about"
+		class="flex flex-col gap-y-10 border-b border-white border-opacity-5 px-5 md:px-16 py-8 md:py-14"
+	>
+		<h2 class="text-5xl md:text-6xl leading-none whitespace-nowrap">About me</h2>
 		<div class="text-xl 2xl:text-2xl">
 			Hey there! Nice to meet you.
 			<br />
@@ -43,8 +46,8 @@
 		</div>
 	</div>
 
-	<div id="projects" class="flex flex-col gap-y-10 px-16 py-14">
-		<h2 class="text-6xl font-light leading-none">Projects</h2>
+	<div id="projects" class="flex flex-col gap-y-10 px-5 md:px-16 py-8 md:py-14">
+		<h2 class="text-5xl md:text-6xl font-light leading-none">Projects</h2>
 
 		<div class="basic-grid">
 			<ProjectCard
