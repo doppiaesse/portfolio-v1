@@ -12,7 +12,7 @@
 		const anchor = document.getElementById(anchorId);
 		if (anchor) {
 			window.scrollTo({
-				top: anchor.offsetTop - 20,
+				top: anchor.offsetTop - 40,
 				behavior: 'smooth'
 			});
 		}
