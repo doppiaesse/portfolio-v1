@@ -2,9 +2,9 @@
 	import { fly } from 'svelte/transition';
 
 	const navigation = [
-		{ name: 'About', href: '#about' },
-		{ name: 'Projects', href: '#projects' },
-		{ name: 'Contact', href: '#contact' }
+		{ name: '// projects', href: '#projects' },
+		{ name: '// about', href: '#about' },
+		{ name: '// contact', href: '#contact' }
 	];
 
 	function handleAnchorClick(event: any) {

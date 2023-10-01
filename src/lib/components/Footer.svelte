@@ -19,14 +19,21 @@
 	}
 </script>
 
-<header id="top" class="border-b border-white border-opacity-5 shadow-md">
-	<nav class="flex items-center px-4 sm:px-10 py-7 sm:py-8 justify-between text-3xl font-light">
-		<a href="#top" class="text-6xl sign -mt-2" on:click={handleAnchorClick}> SS </a>
+<footer class="border-t border-white border-opacity-5 mt-12 sm:mt-16 px-4 sm:px-28">
+	<nav
+		class="flex items-start sm:items-center py-8 sm:py-12 justify-between text-2xl sm:text-3xl font-light"
+	>
+		<a href="#top" class="text-5xl sign sm:-mt-2 opacity-90" on:click={handleAnchorClick}> SS </a>
 
-		<div class="hidden sm:flex gap-x-7">
+		<div class="flex flex-col sm:flex-row gap-x-7 opacity-80">
 			{#each navigation as item (item.name)}
 				<a href={item.href} on:click={handleAnchorClick}>{item.name}</a>
 			{/each}
 		</div>
 	</nav>
-</header>
+	<div
+		class="flex items-center justify-between text-md sm:text-lg font-light pt-2 sm:pt-0 pb-5 opacity-70"
+	>
+		Copyright © 2023. Made by Simone Salerno.
+	</div>
+</footer>
