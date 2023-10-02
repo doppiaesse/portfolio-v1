@@ -1,24 +1,12 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
+	import { handleAnchorClick } from '$lib/utils';
 
 	const navigation = [
 		{ name: '// projects', href: '#projects' },
 		{ name: '// about', href: '#about' },
 		{ name: '// contact', href: '#contact' }
 	];
-
-	function handleAnchorClick(event: any) {
-		event.preventDefault();
-		const link = event.currentTarget;
-		const anchorId = new URL(link.href).hash.replace('#', '');
-		const anchor = document.getElementById(anchorId);
-		if (anchor) {
-			window.scrollTo({
-				top: anchor.offsetTop - 40,
-				behavior: 'smooth'
-			});
-		}
-	}
 
 	let scroll: number;
 	$: show = scroll > 350 ? true : false;

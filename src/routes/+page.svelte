@@ -29,7 +29,7 @@
 	</div>
 
 	<div
-		class="flex flex-col md:w-[45%] text-lg sm:text-2xl opacity-80 gap-y-4 sm:gap-y-6 justify-end"
+		class="flex flex-col md:w-[45%] text-xl sm:text-2xl opacity-80 gap-y-4 sm:gap-y-6 justify-end"
 	>
 		<p>Full-Stack developer who loves diving into innovative projects and solving problems.</p>
 		<p>
@@ -39,7 +39,7 @@
 	</div>
 </div>
 
-<div id="projects" class="flex flex-col gap-y-10 sm:gap-y-14 px-4 sm:px-40 py-12 sm:py-16">
+<div id="projects" class="flex flex-col gap-y-10 sm:gap-y-14 px-4 sm:px-32 py-12 sm:py-16">
 	<h2 class="text-5xl sm:text-6xl font-light leading-none">Projects</h2>
 
 	<div class="basic-grid">
@@ -72,10 +72,10 @@
 
 <div
 	id="about"
-	class="flex flex-col gap-y-10 border-t border-white border-opacity-5 px-4 sm:px-40 py-12 sm:py-16"
+	class="flex flex-col gap-y-10 border-t border-white border-opacity-5 px-4 sm:px-32 py-12 sm:py-16"
 >
 	<h2 class="text-5xl sm:text-6xl leading-none whitespace-nowrap">About me</h2>
-	<div class="text-xl 2xl:text-2xl sm:px-3">
+	<div class="text-xl sm:text-2xl sm:px-3">
 		Hey there! Nice to meet you.
 		<br />
 		<br />
