@@ -5,7 +5,7 @@
 	export let link: string;
 </script>
 
-<div class="flex justify-center pt-3 md:p-3">
+<div class="flex justify-center">
 	<div
 		class="shadow-md bg-white bg-opacity-[0.01] border border-white border-opacity-10 rounded-3xl"
 	>
