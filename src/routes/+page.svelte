@@ -96,7 +96,7 @@
 	class="flex flex-col items-center sm:flex-row gap-16 sm:gap-40 border-t border-white border-opacity-5 sm:px-44 pt-16 pb-20 sm:pt-32 sm:pb-36"
 >
 	<div
-		class="order-2 flex md:w-[60%] flex-col tracking-tight justify-between gap-y-16 sm:gap-y-24 px-4 sm:px-0"
+		class="flex md:w-[60%] flex-col tracking-tight justify-between gap-y-16 sm:gap-y-24 px-4 sm:px-0"
 	>
 		<div class="flex flex-col gap-y-5 sm:gap-y-7">
 			<h3 class="text-4xl sm:text-6xl">Available for select freelance opportunities</h3>
@@ -105,10 +105,8 @@
 			</p>
 		</div>
 
-		<div class="flex flex-col text-lg sm:text-xl gap-y-4">
-			<a class="text-xl sm:text-2xl" href="mailto:contact@simonesalerno.it"
-				>contact@simonesalerno.it</a
-			>
+		<div class="flex flex-col text-xl gap-y-4">
+			<a class="text-2xl" href="mailto:contact@simonesalerno.it">contact@simonesalerno.it</a>
 			<div class="flex flex-col gap-y-2">
 				<a href="https://www.linkedin.com/in/simone-salerno/" target="_blank">LinkedIn</a>
 				<a href="https://github.com/novakoder/" target="_blank">GitHub</a>
@@ -119,7 +117,7 @@
 	</div>
 
 	<div
-		class="sm:order-2 flex flex-col md:w-[45%] gap-y-10 sm:gap-y-12 px-4 sm:px-0 pb-20 sm:pb-0 border-b sm:border-b-0 border-white border-opacity-5"
+		class="flex flex-col md:w-[45%] gap-y-10 sm:gap-y-12 px-4 sm:px-0 pt-16 sm:pt-0 border-t sm:border-t-0 border-white border-opacity-5"
 	>
 		<h3 class="text-4xl sm:self-end">// contact module</h3>
 		<form action="" class="flex flex-col gap-y-10">
