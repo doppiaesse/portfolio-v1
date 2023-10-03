@@ -98,9 +98,9 @@
 	<div
 		class="flex md:w-[60%] flex-col tracking-tight justify-between gap-y-16 sm:gap-y-24 px-4 sm:px-0"
 	>
-		<div class="flex flex-col gap-y-5 sm:gap-y-7">
-			<h3 class="text-4xl sm:text-6xl">Available for select freelance opportunities</h3>
-			<p class="text-xl sm:text-2xl">
+		<div class="flex flex-col gap-y-7">
+			<h3 class="text-5xl sm:text-6xl">Available for select freelance opportunities</h3>
+			<p class="text-2xl">
 				Have an engaging project in mind? Feel free to reach out to me by email or instant message.
 			</p>
 		</div>
@@ -164,7 +164,7 @@
 			</div>
 			<button
 				type="submit"
-				class="sm:self-end rounded-full bg-black bg-opacity-60 w-[45%] pt-[0.63rem] pb-3 text-white text-xl"
+				class="sm:self-end rounded-full bg-black bg-opacity-60 w-[60%] sm:w-[45%] pt-[0.63rem] pb-3 text-white text-xl"
 				>Send Message</button
 			>
 		</form>
