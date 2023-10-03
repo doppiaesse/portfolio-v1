@@ -28,9 +28,7 @@
 		</div>
 	</div>
 
-	<div
-		class="flex flex-col md:w-[45%] text-xl sm:text-2xl opacity-80 gap-y-4 sm:gap-y-6 justify-end"
-	>
+	<div class="flex flex-col md:w-[45%] text-2xl opacity-80 gap-y-4 sm:gap-y-6 justify-end">
 		<p>Full-Stack developer who loves diving into innovative projects and solving problems.</p>
 		<p>
 			Following the latest industry trends, I create friendly, efficient, and scalable solutions
@@ -39,10 +37,13 @@
 	</div>
 </div>
 
-<div id="projects" class="flex flex-col gap-y-10 sm:gap-y-16 px-4 sm:px-44 py-12 sm:pt-16 sm:pb-20">
+<div
+	id="projects"
+	class="flex flex-col gap-y-12 sm:gap-y-16 px-4 sm:px-44 pt-14 pb-16 sm:pt-16 sm:pb-20"
+>
 	<h2 class="text-5xl sm:text-6xl font-light">// projects</h2>
 
-	<div class="basic-grid gap-x-3">
+	<div class="basic-grid gap-3">
 		<ProjectCard
 			title="Let's Code Italia"
 			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
@@ -72,10 +73,10 @@
 
 <div
 	id="about"
-	class="flex flex-col gap-y-10 sm:gap-y-16 border-t border-white border-opacity-5 px-4 sm:px-44 py-12 sm:pt-16 sm:pb-20"
+	class="flex flex-col gap-y-12 sm:gap-y-16 border-t border-white border-opacity-5 px-4 sm:px-44 pt-14 pb-16 sm:pt-16 sm:pb-20"
 >
 	<h2 class="text-5xl sm:text-6xl whitespace-nowrap">// about me</h2>
-	<div class="text-xl sm:text-2xl">
+	<div class="text-2xl">
 		Hey there! Nice to meet you.
 		<br />
 		<br />

@@ -5,7 +5,7 @@ export function handleAnchorClick(event: any) {
 	const anchor = document.getElementById(anchorId);
 	if (anchor) {
 		window.scrollTo({
-			top: anchor.offsetTop - 50,
+			top: anchor.offsetTop - 70,
 			behavior: 'smooth'
 		});
 	}
