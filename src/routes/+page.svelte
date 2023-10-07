@@ -7,7 +7,7 @@
 <Navbar />
 
 <div
-	class="flex flex-col gap-10 2xl:gap-20 border-b border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-28 pb-32 sm:pt-32 sm:pb-36"
+	class="flex flex-col gap-10 2xl:gap-20 border-b border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-24 pb-28 sm:pt-32 sm:pb-36"
 >
 	<div class="flex flex-col tracking-tighter leading-[0.7] justify-center gap-y-7 sm:gap-y-9">
 		<div class="text-7xl xl:text-8xl">
