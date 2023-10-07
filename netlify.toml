@@ -1,4 +1,4 @@
 [build]
-    command = "pnpm run build —minify"
+    command = "pnpm run build --minify"
     publish = "build/"
     functions = "functions/"
