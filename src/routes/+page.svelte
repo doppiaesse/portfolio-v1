@@ -7,12 +7,10 @@
 <Navbar />
 
 <div
-	class="flex flex-col xl:flex-row gap-10 2xl:gap-20 border-b border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 py-28 sm:py-40"
+	class="flex flex-col gap-10 2xl:gap-20 border-b border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-28 pb-32 sm:pt-32 sm:pb-36"
 >
-	<div
-		class="flex xl:w-[65%] 2xl:w-[60%] flex-col tracking-tighter leading-[0.7] justify-center gap-y-7 sm:gap-y-10"
-	>
-		<div class="text-7xl 2xl:text-[5.5rem]">
+	<div class="flex flex-col tracking-tighter leading-[0.7] justify-center gap-y-7 sm:gap-y-9">
+		<div class="text-7xl 2xl:text-8xl">
 			<p>Hello, I'm Simone</p>
 		</div>
 
@@ -31,7 +29,7 @@
 	</div>
 
 	<div
-		class="flex flex-col xl:w-[35%] 2xl:w-[40%] text-2xl xl:text-xl 2xl:text-2xl opacity-80 gap-y-4 sm:gap-y-6 justify-center"
+		class="flex flex-col text-2xl xl:text-xl 2xl:text-3xl opacity-80 gap-y-4 sm:gap-y-6 justify-center"
 	>
 		<p>Full-Stack developer who loves diving into innovative projects and solving problems.</p>
 		<p>
@@ -43,9 +41,9 @@
 
 <div
 	id="projects"
-	class="flex flex-col gap-y-14 sm:gap-y-16 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-24 pb-28 sm:pt-32 sm:pb-36"
+	class="flex flex-col gap-y-14 sm:gap-y-16 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
-	<h2 class="text-5xl sm:text-6xl font-light">// projects</h2>
+	<h2 class="text-5xl sm:text-6xl font-light">Projects</h2>
 
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 		<ProjectCard
@@ -77,9 +75,9 @@
 
 <div
 	id="about"
-	class="flex flex-col gap-y-14 sm:gap-y-16 border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-24 pb-28 sm:pt-32 sm:pb-36"
+	class="flex flex-col gap-y-14 sm:gap-y-16 border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
-	<h2 class="text-5xl sm:text-6xl whitespace-nowrap">// about me</h2>
+	<h2 class="text-5xl sm:text-6xl whitespace-nowrap">About me</h2>
 	<div class="text-2xl">
 		Hey there! Nice to meet you.
 		<br />
@@ -98,7 +96,7 @@
 
 <div
 	id="contact"
-	class="flex flex-col items-center border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-24 pb-28 sm:pt-32 sm:pb-36"
+	class="flex flex-col items-center border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
 	<div class="flex w-full flex-col tracking-tight justify-between gap-y-16 sm:gap-y-24">
 		<div class="flex flex-col gap-y-10">
