@@ -98,7 +98,7 @@
 
 <div
 	id="contact"
-	class="flex flex-col items-center xl:flex-row gap-28 sm:gap-40 xl:gap-20 2xl:gap-28 border-t border-white border-opacity-5 xl:px-32 2xl:px-44 pt-24 pb-28 sm:pt-32 sm:pb-36"
+	class="flex flex-col items-center xl:flex-row gap-24 sm:gap-32 xl:gap-20 2xl:gap-28 border-t border-white border-opacity-5 xl:px-32 2xl:px-44 pt-24 pb-28 sm:pt-32 sm:pb-36"
 >
 	<div
 		class="flex xl:w-[60%] flex-col tracking-tight justify-between gap-y-16 sm:gap-y-24 px-4 sm:px-16 lg:px-32 xl:px-0"
