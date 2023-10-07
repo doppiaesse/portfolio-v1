@@ -1,5 +1,12 @@
 <script lang="ts">
 	import { handleAnchorClick } from '$lib/utils';
+	import { fade } from 'svelte/transition';
+	import MenuCloseIcon from './icons/menuClose.svelte';
+	import MenuOpenIcon from './icons/menuOpen.svelte';
+	import { menuStatus } from '$lib/utils';
+
+	let menu = $menuStatus;
+	$: menuStatus.set(!menu);
 
 	const navigation = [
 		{ name: '// projects', href: '#projects' },
@@ -18,6 +25,38 @@
 			{#each navigation as item (item.name)}
 				<a href={item.href} on:click={handleAnchorClick}>{item.name}</a>
 			{/each}
+		</div>
+
+		<div class="flex sm:hidden w-[40px] h-[40px]">
+			{#if menu}
+				<button
+					class="fixed z-20"
+					transition:fade={{ duration: 100 }}
+					on:click={() => (menu = !menu)}
+				>
+					<MenuCloseIcon />
+				</button>
+				<div
+					class="fixed top-0 left-0 w-screen h-screen bg-nav-mobile z-10 flex flex-col items-center justify-center"
+					transition:fade={{ duration: 300 }}
+				>
+					<div class="flex flex-col gap-y-3">
+						{#each navigation as item (item.name)}
+							<a href={item.href} on:click={(event) => (handleAnchorClick(event), (menu = !menu))}
+								>{item.name}</a
+							>
+						{/each}
+					</div>
+				</div>
+			{:else}
+				<button
+					class="absolute"
+					transition:fade={{ duration: 100 }}
+					on:click={() => (menu = !menu)}
+				>
+					<MenuOpenIcon />
+				</button>
+			{/if}
 		</div>
 	</nav>
 </header>

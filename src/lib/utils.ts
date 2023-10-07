@@ -1,3 +1,5 @@
+import { writable } from 'svelte/store';
+
 export function handleAnchorClick(event: any) {
 	event.preventDefault();
 	const link = event.currentTarget;
@@ -10,3 +12,5 @@ export function handleAnchorClick(event: any) {
 		});
 	}
 }
+
+export const menuStatus = writable(false);

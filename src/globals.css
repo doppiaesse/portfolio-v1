@@ -3,9 +3,17 @@
 @tailwind utilities;
 
 html {
-	background-color: rgb(20 20 20);
+	@apply bg-dark;
 	@apply text-gray-100;
 	@apply font-light;
+}
+
+.bg-dark {
+	background-color: rgb(18 18 18);
+}
+
+.bg-nav-mobile {
+	background-color: rgba(18, 18, 18, 0.98);
 }
 
 .logo-shadow {

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import { handleAnchorClick } from '$lib/utils';
+	import { menuStatus } from '$lib/utils';
 
 	const navigation = [
 		{ name: '// projects', href: '#projects' },
@@ -9,7 +10,7 @@
 	];
 
 	let scroll: number;
-	$: show = scroll > 350 ? true : false;
+	$: show = scroll > 350 && $menuStatus ? true : false;
 </script>
 
 <svelte:window bind:scrollY={scroll} />
@@ -21,7 +22,7 @@
 		out:fly={{ duration: 300 }}
 	>
 		<nav
-			class="flex border border-white border-opacity-5 rounded-full items-center justify-between text-lg font-light backdrop-blur-md bg-white bg-opacity-[0.03] px-4 shadow-md"
+			class="flex border border-white border-opacity-5 rounded-full items-center justify-between text-lg font-light backdrop-blur-md bg-white bg-opacity-[0.02] px-4 shadow-md"
 		>
 			<a href="#top" class="text-3xl sign px-3 pt-2 pb-[0.6rem]" on:click={handleAnchorClick}>
 				SS
