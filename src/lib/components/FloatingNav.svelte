@@ -2,7 +2,6 @@
 	import { fly } from 'svelte/transition';
 	import { handleAnchorClick } from '$lib/utils';
 	import { fade } from 'svelte/transition';
-	import MenuCloseIcon from './icons/MenuClose.svelte';
 	import MenuOpenIcon from './icons/MenuOpen.svelte';
 	import { menuStatus } from '$lib/utils';
 
