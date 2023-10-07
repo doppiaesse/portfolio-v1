@@ -2,7 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import { handleAnchorClick } from '$lib/utils';
 	import { fade } from 'svelte/transition';
-	import MenuOpen from './icons/MenuOpen.svelte';
+	import MenuOpen from './icons/menuOpen.svelte';
 	import { menuStatus } from '$lib/utils';
 
 	function handleMenuClick() {
