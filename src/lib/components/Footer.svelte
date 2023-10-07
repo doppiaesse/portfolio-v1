@@ -8,7 +8,7 @@
 	];
 </script>
 
-<footer class="border-t border-white border-opacity-5 px-4 sm:px-14">
+<footer class="border-t border-white border-opacity-5 px-4 sm:px-8 lg:px-14">
 	<nav class="flex items-start py-8 sm:py-12 justify-between text-xl sm:text-2xl font-light">
 		<a href="#top" class="text-5xl sign opacity-90" on:click={handleAnchorClick}> SS </a>
 

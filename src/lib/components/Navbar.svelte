@@ -9,7 +9,9 @@
 </script>
 
 <header id="top" class="border-b border-white border-opacity-5 shadow-md">
-	<nav class="flex items-center px-4 sm:px-14 py-7 sm:py-9 justify-between text-3xl font-light">
+	<nav
+		class="flex items-center px-4 sm:px-8 lg:px-14 py-7 sm:py-9 justify-between text-3xl font-light"
+	>
 		<a href="#top" class="text-6xl sign -mt-2" on:click={handleAnchorClick}> SS </a>
 
 		<div class="hidden sm:flex gap-x-7">

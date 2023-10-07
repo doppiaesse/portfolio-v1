@@ -16,7 +16,7 @@
 
 {#if show}
 	<header
-		class="fixed top-4 left-0 flex w-full justify-center"
+		class="fixed top-4 left-0 flex w-full justify-center z-10"
 		in:fly={{ y: -30, duration: 300 }}
 		out:fly={{ duration: 300 }}
 	>

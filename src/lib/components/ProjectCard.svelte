@@ -7,7 +7,7 @@
 
 <div class="flex justify-center">
 	<div
-		class="shadow-md bg-white bg-opacity-[0.01] border border-white border-opacity-10 rounded-3xl"
+		class="shadow-md bg-white bg-opacity-[0.01] border border-white border-opacity-10 rounded-3xl hover:scale-105 hover:rotate-1 transition-all duration-500 ease-in-out"
 	>
 		<a href={link}>
 			<img class="rounded-t-3xl" src={image} alt={title} />
