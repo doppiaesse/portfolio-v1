@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { handleAnchorClick } from '$lib/utils';
 	import { fade } from 'svelte/transition';
-	import MenuCloseIcon from './icons/MenuClose.svelte';
-	import MenuOpenIcon from './icons/MenuOpen.svelte';
+	import MenuClose from './icons/MenuClose.svelte';
+	import MenuOpen from './icons/MenuOpen.svelte';
 	import { menuStatus } from '$lib/utils';
 
 	function handleMenuClick() {
@@ -31,7 +31,7 @@
 		<div class="flex sm:hidden w-[40px] h-[40px]">
 			{#if $menuStatus}
 				<button class="fixed z-20" transition:fade={{ duration: 100 }} on:click={handleMenuClick}>
-					<MenuCloseIcon />
+					<MenuClose />
 				</button>
 
 				<div
@@ -49,7 +49,7 @@
 				</div>
 			{:else}
 				<button class="absolute" transition:fade={{ duration: 100 }} on:click={handleMenuClick}>
-					<MenuOpenIcon />
+					<MenuOpen />
 				</button>
 			{/if}
 		</div>

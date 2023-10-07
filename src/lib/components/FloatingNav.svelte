@@ -2,7 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import { handleAnchorClick } from '$lib/utils';
 	import { fade } from 'svelte/transition';
-	import MenuOpenIcon from './icons/MenuOpen.svelte';
+	import MenuOpen from './icons/MenuOpen.svelte';
 	import { menuStatus } from '$lib/utils';
 
 	function handleMenuClick() {
@@ -45,7 +45,7 @@
 			<div class="flex sm:hidden w-[40px] h-[40px]">
 				{#if !$menuStatus}
 					<button class="absolute" transition:fade={{ duration: 100 }} on:click={handleMenuClick}>
-						<MenuOpenIcon />
+						<MenuOpen />
 					</button>
 				{/if}
 			</div>
