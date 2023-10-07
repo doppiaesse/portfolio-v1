@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { handleAnchorClick } from '$lib/utils';
 	import { fade } from 'svelte/transition';
-	import MenuClose from './icons/menuClose.svelte';
-	import MenuOpen from './icons/menuOpen.svelte';
+	import MenuClose from './icons/CloseMenu.svelte';
+	import MenuOpen from './icons/OpenMenu.svelte';
 	import { menuStatus } from '$lib/utils';
 
 	function handleMenuClick() {

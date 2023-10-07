@@ -1,35 +1,13 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import FloatingNav from '$lib/components/FloatingNav.svelte';
 	import { menuStatus } from '$lib/utils';
 	import '../globals.css';
-	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
 
-	let scrollTop: number;
-	let scrollLeft: number;
-
-	function disableScroll() {
-		if (browser) {
-			window.onscroll = function () {
-				window.scrollTo(scrollLeft, scrollTop);
-			};
-		}
-	}
-
-	function enableScroll() {
-		if (browser) {
-			window.onscroll = function () {};
-		}
-	}
-
-	$: if ($menuStatus) {
-		disableScroll();
-	} else {
-		enableScroll();
+	$: if (browser) {
+		document.body.style.overflow = $menuStatus ? 'hidden' : '';
 	}
 </script>
-
-<svelte:window bind:scrollY={scrollTop} bind:scrollX={scrollLeft} />
 
 <svelte:head>
 	<title>Hi! I'm Simone</title>
