@@ -127,7 +127,9 @@
 
 	<div class="flex flex-col w-full xl:w-[45%] gap-y-10 sm:gap-y-12 px-4 sm:px-16 lg:px-32 xl:px-0">
 		<h3 class="text-4xl xl:self-end">// contact module</h3>
-		<form class="flex flex-col gap-y-10" name="contact" method="POST" data-netlify="true">
+		<form class="flex flex-col gap-y-10" name="contact-form" method="POST" data-netlify="true">
+			<input type="hidden" name="form-name" value="contact-form" />
+
 			<div class="grid gap-x-6 gap-y-8 sm:grid-cols-2 opacity-80">
 				<div class="relative z-0">
 					<input
