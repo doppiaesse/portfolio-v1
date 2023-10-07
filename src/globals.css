@@ -25,7 +25,7 @@ html {
 
 .highlight {
 	display: inline;
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, rgba(169, 33, 32, 0.85) 65%);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, rgba(167, 139, 250, 0.6) 65%);
 }
 
 ::-webkit-scrollbar {
