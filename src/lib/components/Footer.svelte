@@ -19,7 +19,7 @@
 		</div>
 	</nav>
 	<div
-		class="flex items-center justify-between text-md sm:text-lg font-light pt-2 sm:pt-0 pb-5 opacity-70"
+		class="flex items-center justify-between text-md sm:text-lg font-light pt-2 sm:pt-0 pb-6 opacity-70"
 	>
 		Copyright © 2023. Made by Simone Salerno.
 	</div>

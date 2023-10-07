@@ -98,7 +98,7 @@
 
 <div
 	id="contact"
-	class="flex flex-col items-center xl:flex-row gap-24 sm:gap-32 xl:gap-20 2xl:gap-28 border-t border-white border-opacity-5 xl:px-32 2xl:px-44 pt-24 pb-28 sm:pt-32 sm:pb-36"
+	class="flex flex-col items-center xl:flex-row gap-16 sm:gap-20 2xl:gap-28 border-t border-white border-opacity-5 xl:px-32 2xl:px-44 pt-24 pb-28 sm:pt-32 sm:pb-36"
 >
 	<div
 		class="flex xl:w-[60%] flex-col tracking-tight justify-between gap-y-16 sm:gap-y-24 px-4 sm:px-16 lg:px-32 xl:px-0"
@@ -125,11 +125,9 @@
 		</div>
 	</div>
 
-	<div
-		class="flex flex-col w-full xl:w-[45%] gap-y-10 sm:gap-y-12 px-4 sm:px-16 lg:px-32 xl:px-0 pt-20 sm:pt-28 xl:pt-0 border-t xl:border-t-0 border-white border-opacity-5"
-	>
+	<div class="flex flex-col w-full xl:w-[45%] gap-y-10 sm:gap-y-12 px-4 sm:px-16 lg:px-32 xl:px-0">
 		<h3 class="text-4xl xl:self-end">// contact module</h3>
-		<form action="" class="flex flex-col gap-y-10">
+		<form class="flex flex-col gap-y-10" name="contact" method="POST" data-netlify="true">
 			<div class="grid gap-x-6 gap-y-8 sm:grid-cols-2 opacity-80">
 				<div class="relative z-0">
 					<input
@@ -173,7 +171,7 @@
 			</div>
 			<button
 				type="submit"
-				class="xl:self-end rounded-full bg-black bg-opacity-60 w-[60%] sm:w-[45%] pt-[0.63rem] pb-3 text-white text-xl"
+				class="xl:self-end rounded-full bg-white bg-opacity-[0.02] border border-white border-opacity-10 w-[60%] sm:w-[45%] pt-[0.63rem] pb-3 text-white text-xl shadow-md hover:scale-105 transition-transform duration-300"
 				>Send Message</button
 			>
 		</form>
