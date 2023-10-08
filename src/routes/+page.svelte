@@ -53,7 +53,7 @@
 </div>
 
 <div
-	id="projects"
+	id="progetti"
 	class="flex flex-col gap-y-14 sm:gap-y-16 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
 	<h2 class="text-5xl sm:text-6xl 2xl:text-7xl font-light">Progetti</h2>
@@ -87,7 +87,7 @@
 </div>
 
 <div
-	id="about"
+	id="chi-sono"
 	class="flex flex-col gap-y-14 sm:gap-y-16 border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
 	<h2 class="text-5xl sm:text-6xl 2xl:text-7xl whitespace-nowrap">Chi sono</h2>
@@ -109,7 +109,7 @@
 </div>
 
 <div
-	id="contact"
+	id="contatti"
 	class="flex flex-col items-center border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
 	<div class="flex w-full flex-col tracking-tight justify-between gap-y-16 sm:gap-y-24">
