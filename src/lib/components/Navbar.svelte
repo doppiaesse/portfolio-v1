@@ -4,16 +4,15 @@
 	import MenuClose from './icons/CloseMenu.svelte';
 	import MenuOpen from './icons/OpenMenu.svelte';
 	import { menuStatus } from '$lib/utils';
+	import { page } from '$app/stores';
+	import { navigation } from '$lib/utils';
 
 	function handleMenuClick() {
 		menuStatus.update((value) => !value);
 	}
 
-	const navigation = [
-		{ name: '// projects', href: '#projects' },
-		{ name: '// about', href: '#about' },
-		{ name: '// contact', href: '#contact' }
-	];
+	export let en = false;
+	$: navigationLang = en ? navigation.en : navigation.it;
 </script>
 
 <header id="top" class="border-b border-white border-opacity-5 shadow-md">
@@ -23,7 +22,7 @@
 		<a href="#top" class="text-6xl sign -mt-2" on:click={handleAnchorClick}> SS </a>
 
 		<div class="hidden sm:flex gap-x-7">
-			{#each navigation as item (item.name)}
+			{#each navigationLang as item (item.name)}
 				<a href={item.href} on:click={handleAnchorClick}>{item.name}</a>
 			{/each}
 		</div>
@@ -39,7 +38,7 @@
 					transition:fade={{ duration: 300 }}
 				>
 					<div class="flex flex-col gap-y-3">
-						{#each navigation as item (item.name)}
+						{#each navigationLang as item (item.name)}
 							<a
 								href={item.href}
 								on:click={(event) => (handleAnchorClick(event), handleMenuClick())}>{item.name}</a

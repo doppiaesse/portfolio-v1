@@ -14,3 +14,16 @@ export function handleAnchorClick(event: any) {
 }
 
 export const menuStatus = writable(false);
+
+export const navigation = {
+	it: [
+		{ name: '// progetti', href: '#progetti' },
+		{ name: '// chi sono', href: '#chi-sono' },
+		{ name: '// contatti', href: '#contatti' }
+	],
+	en: [
+		{ name: '// projects', href: '#projects' },
+		{ name: '// about', href: '#about' },
+		{ name: '// contact', href: '#contact' }
+	]
+};

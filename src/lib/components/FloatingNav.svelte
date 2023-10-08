@@ -4,16 +4,15 @@
 	import { fade } from 'svelte/transition';
 	import MenuOpen from './icons/OpenMenu.svelte';
 	import { menuStatus } from '$lib/utils';
+	import { page } from '$app/stores';
+	import { navigation } from '$lib/utils';
 
 	function handleMenuClick() {
 		menuStatus.update((value) => !value);
 	}
 
-	const navigation = [
-		{ name: '// projects', href: '#projects' },
-		{ name: '// about', href: '#about' },
-		{ name: '// contact', href: '#contact' }
-	];
+	export let en = false;
+	$: navigationLang = en ? navigation.en : navigation.it;
 
 	let scroll: number;
 	$: show = scroll > 350 && !$menuStatus ? true : false;
@@ -37,7 +36,7 @@
 				SS
 			</a>
 
-			{#each navigation as item (item.name)}
+			{#each navigationLang as item (item.name)}
 				<a href={item.href} class="px-3 sm:flex hidden" on:click={handleAnchorClick}>{item.name}</a>
 			{/each}
 
