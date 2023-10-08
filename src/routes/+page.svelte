@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Ciao! Sono Simone</title>
+	<title>Ciao! Sono Simone - Sviluppatore software</title>
 	<meta
 		name="description"
 		content="Ciao! Sono Simone, sviluppatore appassionato di tecnologia e creativo problem-solver. Questo è il mio portfolio, dove puoi trovare qualcosa su di me e sui miei progetti. Connettiamoci!"
@@ -46,7 +46,7 @@
 	<div class="flex flex-col text-2xl xl:text-3xl opacity-80 gap-y-4 sm:gap-y-6 justify-center">
 		<p>Sviluppatore full-stack che ama immergersi in progetti innovativi e risolvere problemi.</p>
 		<p>
-			Seguendo le ultime tendenze del settore, creo soluzioni amichevoli, efficienti e scalabili che
+			Seguendo le ultime tendenze del settore, creo soluzioni semplici, efficienti e scalabili che
 			impressionano davvero.
 		</p>
 	</div>

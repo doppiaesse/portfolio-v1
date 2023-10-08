@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Hi! I'm Simone</title>
+	<title>Hi! I'm Simone - Software developer</title>
 	<meta
 		name="description"
 		content="Hi! I'm Simone, a passionate tech enthusiast and creative problem solver. This is my portfolio, where you can find something about me and my projects. Let's connect!"
