@@ -13,8 +13,8 @@
 			<span>Perpetually curious</span>
 		{:else}
 			<span>Sviluppatore Full-Stack</span>
-			<span>Appassionato di tecnologia</span>
-			<span>Perennemente curioso</span>
+			<span>Amante della tecnologia</span>
+			<span>Sempre curioso</span>
 		{/if}
 	</Typewriter>
 </div>
