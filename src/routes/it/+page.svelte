@@ -22,15 +22,15 @@
 <FloatingNav />
 
 <div
-	class="flex flex-col gap-10 2xl:gap-20 border-b border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-24 pb-28 sm:pt-32 sm:pb-36"
+	class="flex flex-col gap-10 2xl:gap-16 border-b border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 min-h-[95vh] justify-center pt-48 pb-24 sm:pt-24 sm:pb-0"
 >
-	<div class="flex flex-col tracking-tighter leading-[0.7] justify-center gap-y-6 sm:gap-y-9">
-		<div class="text-7xl xl:text-8xl">
+	<div class="flex flex-col tracking-tighter justify-center gap-y-6 sm:gap-y-9">
+		<div class="text-[5rem] leading-none xl:text-8xl 2xl:text-[7rem]">
 			<p>Ciao, sono Simone</p>
 		</div>
 
 		<div
-			class="text-3xl xl:text-5xl leading-[0.9] typewriter whitespace-nowrap italic tracking-tight"
+			class="text-3xl xl:text-5xl 2xl:text-[3.5rem] typewriter whitespace-nowrap italic tracking-tight"
 		>
 			{#await import('$lib/components/Typewriter.svelte')}
 				<div class="flex pb-[0.43rem]">
@@ -43,7 +43,9 @@
 		</div>
 	</div>
 
-	<div class="flex flex-col text-2xl xl:text-3xl opacity-80 gap-y-4 sm:gap-y-6 justify-center">
+	<div
+		class="flex flex-col text-2xl xl:text-[1.7rem] 2xl:text-3xl opacity-80 gap-y-4 sm:gap-y-6 justify-center"
+	>
 		<p>Sviluppatore full-stack che ama immergersi in progetti innovativi e risolvere problemi.</p>
 		<p>
 			Seguendo le ultime tendenze del settore, creo soluzioni semplici, efficienti e scalabili che

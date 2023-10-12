@@ -15,7 +15,7 @@
 	$: navigationLang = en ? navigation.en : navigation.it;
 </script>
 
-<header id="top" class="border-b border-white border-opacity-5 shadow-md">
+<header id="top" class="absolute w-full border-b border-white border-opacity-5 shadow-md">
 	<nav
 		class="flex items-center px-4 sm:px-8 lg:px-14 pt-8 pb-7 sm:py-9 justify-between text-3xl font-light"
 	>
