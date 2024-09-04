@@ -1,18 +1,15 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
-	import { handleAnchorClick } from '$lib/utils';
+	import { handleAnchorClick, language } from '$lib/utils';
+	import { get } from 'svelte/store';
 	import { fade } from 'svelte/transition';
 	import MenuOpen from './icons/OpenMenu.svelte';
 	import { menuStatus } from '$lib/utils';
-	import { page } from '$app/stores';
-	import { navigation } from '$lib/utils';
 
 	function handleMenuClick() {
 		menuStatus.update((value) => !value);
 	}
 
-	export let en = false;
-	$: navigationLang = en ? navigation.en : navigation.it;
+	const routes = get(language).navigation;
 
 	let scroll: number;
 	$: show = scroll > 350 && !$menuStatus ? true : false;
@@ -36,8 +33,10 @@
 				SS
 			</a>
 
-			{#each navigationLang as item (item.name)}
-				<a href={item.href} class="px-3 sm:flex hidden" on:click={handleAnchorClick}>{item.name}</a>
+			{#each routes as route (route.name)}
+				<a href={route.href} class="px-3 sm:flex hidden" on:click={handleAnchorClick}
+					>{route.name}</a
+				>
 			{/each}
 
 			<div class="flex sm:hidden w-[40px] h-[40px]">

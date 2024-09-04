@@ -1,20 +1,13 @@
 <script lang="ts">
 	import Typewriter from 'svelte-typewriter';
 
-	export let en = false;
+	export let text: string[];
 </script>
 
-<div class="flex">
-	<span class="me-2"> > </span>
+<div class="xl:-mt-2 xl:-my-[0.4rem] -my-[0.2rem] typewriter">
 	<Typewriter mode="loop" interval={60}>
-		{#if en}
-			<span>Full-Stack developer</span>
-			<span>Tech enthusiast</span>
-			<span>Perpetually curious</span>
-		{:else}
-			<span>Sviluppatore Full-Stack</span>
-			<span>Amante della tecnologia</span>
-			<span>Sempre curioso</span>
-		{/if}
+		{#each text as line}
+			<span>{line}</span>
+		{/each}
 	</Typewriter>
 </div>

@@ -1,29 +1,27 @@
 <script lang="ts">
-	import { handleAnchorClick } from '$lib/utils';
-	import { fade } from 'svelte/transition';
 	import MenuClose from './icons/CloseMenu.svelte';
 	import MenuOpen from './icons/OpenMenu.svelte';
+	import { handleAnchorClick, language } from '$lib/utils';
+	import { get } from 'svelte/store';
+	import { fade } from 'svelte/transition';
 	import { menuStatus } from '$lib/utils';
-	import { page } from '$app/stores';
-	import { navigation } from '$lib/utils';
 
 	function handleMenuClick() {
 		menuStatus.update((value) => !value);
 	}
 
-	export let en = false;
-	$: navigationLang = en ? navigation.en : navigation.it;
+	const routes = get(language).navigation;
 </script>
 
-<header id="top" class="absolute w-full border-b border-white border-opacity-5 shadow-md">
+<header id="top" class="border-b border-white border-opacity-5 shadow-md">
 	<nav
 		class="flex items-center px-4 sm:px-8 lg:px-14 pt-8 pb-7 sm:py-9 justify-between text-3xl font-light"
 	>
 		<a href="#top" class="text-6xl sign -mt-2" on:click={handleAnchorClick}> SS </a>
 
 		<div class="hidden sm:flex gap-x-7">
-			{#each navigationLang as item (item.name)}
-				<a href={item.href} on:click={handleAnchorClick}>{item.name}</a>
+			{#each routes as route (route.name)}
+				<a href={route.href} on:click={handleAnchorClick}>{route.name}</a>
 			{/each}
 		</div>
 
@@ -38,10 +36,10 @@
 					transition:fade={{ duration: 300 }}
 				>
 					<div class="flex flex-col gap-y-3">
-						{#each navigationLang as item (item.name)}
+						{#each routes as route (route.name)}
 							<a
-								href={item.href}
-								on:click={(event) => (handleAnchorClick(event), handleMenuClick())}>{item.name}</a
+								href={route.href}
+								on:click={(event) => (handleAnchorClick(event), handleMenuClick())}>{route.name}</a
 							>
 						{/each}
 					</div>

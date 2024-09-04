@@ -4,7 +4,7 @@
 	import '../globals.css';
 
 	$: if (browser) {
-		document.body.style.overflow = $menuStatus ? 'hidden' : '';
+		document.documentElement.style.overflow = $menuStatus ? 'hidden' : '';
 	}
 </script>
 
