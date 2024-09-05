@@ -15,9 +15,9 @@
 
 <header id="top" class="border-b border-white border-opacity-5 shadow-md">
 	<nav
-		class="flex items-center px-4 sm:px-8 lg:px-14 pt-8 pb-7 sm:py-9 justify-between text-3xl font-light"
+		class="flex items-center px-4 sm:px-8 lg:px-14 pt-8 pb-7 sm:py-10 justify-between text-3xl font-light"
 	>
-		<a href="#top" class="text-6xl sign -mt-2" on:click={handleAnchorClick}> SS </a>
+		<a href="#top" class="text-6xl 2xl:text-7xl sign -mt-2" on:click={handleAnchorClick}> SS </a>
 
 		<div class="hidden sm:flex gap-x-7">
 			{#each routes as route (route.name)}

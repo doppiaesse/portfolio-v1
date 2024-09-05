@@ -28,7 +28,7 @@
 
 		<div class="text-3xl xl:text-5xl 2xl:text-[3.5rem] whitespace-nowrap italic tracking-tight">
 			<div class="flex">
-				<span class="me-2"> > </span>
+				<span class="me-2 -mt-[0.2rem] mb-[0.2rem]"> > </span>
 				{#await import('$lib/components/Typewriter.svelte')}
 					<span>Loading...</span>
 				{:then c}

@@ -12,7 +12,7 @@
 		<a href={link}>
 			<img class="rounded-t-3xl" src={image} alt={title} />
 		</a>
-		<div class="p-3">
+		<div class="px-6 py-5">
 			<a href={link}>
 				<h5 class="font-medium text-2xl mb-2 text-gray-100">
 					{title}

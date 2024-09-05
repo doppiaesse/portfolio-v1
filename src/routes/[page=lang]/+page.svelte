@@ -1,9 +1,11 @@
 <script lang="ts">
-	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import FloatingNav from '$lib/components/FloatingNav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import Welcome from '$lib/components/sections/Welcome.svelte';
+	import WelcomeSection from '$lib/sections/Welcome.svelte';
+	import ProjectsSection from '$lib/sections/Projects.svelte';
+	import AboutSection from '$lib/sections/About.svelte';
+	import ContactSection from '$lib/sections/Contact.svelte';
 	import { language } from '$lib/utils';
 	import type { PageData } from './$types';
 	export let data: PageData;
@@ -30,148 +32,28 @@
 <div
 	class="flex items-center border-b border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 min-h-[80vh]"
 >
-	<Welcome />
+	<WelcomeSection />
 </div>
 
 <div
-	id="progetti"
-	class="flex flex-col gap-y-14 sm:gap-y-16 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
+	id={data.language.projects.id}
+	class="px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
-	<h2 class="text-5xl sm:text-6xl 2xl:text-7xl font-light">Progetti</h2>
-
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-		<ProjectCard
-			title="Let's Code Italia"
-			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-			image="/projects/lets-code-italia.jpg"
-			link="/projects/lets-code-italia"
-		/>
-		<ProjectCard
-			title="Link Dojo"
-			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-			image="/projects/link-dojo.jpg"
-			link="/projects/link-dojo"
-		/>
-		<ProjectCard
-			title="Didattica Integrata"
-			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-			image="/projects/didattica-integrata.jpg"
-			link="/projects/didattica-integrata"
-		/>
-		<ProjectCard
-			title="doppia.os"
-			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-			image="/projects/doppia-os.jpg"
-			link="/projects/doppia-os"
-		/>
-	</div>
+	<ProjectsSection />
 </div>
 
 <div
-	id="chi-sono"
-	class="flex flex-col gap-y-14 sm:gap-y-16 border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
+	id={data.language.about.id}
+	class="border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
-	<h2 class="text-5xl sm:text-6xl 2xl:text-7xl whitespace-nowrap">Chi sono</h2>
-	<div class="text-2xl 2xl:text-3xl">
-		Ehilà! Piacere di conoscerti.
-		<br />
-		<br />
-		Sono uno sviluppatore di software amante della tecnologia e sempre desideroso di imparare e crescere.
-		Con esperienza sia nello sviluppo di software che di hardware, sono in grado di affrontare sfide
-		di vario genere.
-		<br />
-		<br />
-		In questo momento, sono davvero felice di esplorare il mondo del freelancing e dell'imprenditoria
-		individuale, mentre imparo i segreti e le dinamiche del costruire una startup con un team.
-		<br />
-		<br />
-		Connettiamoci e continuiamo la conversazione!
-	</div>
+	<AboutSection />
 </div>
 
 <div
-	id="contatti"
-	class="flex flex-col items-center border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
+	id={data.language.contact.id}
+	class="border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
-	<div class="flex w-full flex-col tracking-tight justify-between gap-y-16 sm:gap-y-24">
-		<div class="flex flex-col gap-y-10">
-			<h3 class="text-5xl md:text-6xl">Disponibile per selezionate opportunità freelance</h3>
-			<p class="text-2xl md:text-3xl">
-				Hai in mente un progetto coinvolgente? Sentiti libero di contattarmi tramite e-mail o
-				messaggio.
-			</p>
-		</div>
-
-		<div class="flex flex-col text-2xl gap-y-4">
-			<div>
-				<a
-					class="group transition-all duration-300 ease-in-out"
-					href="mailto:contact@simonesalerno.it"
-					target="_blank"
-				>
-					<span
-						class="text-3xl md:text-4xl bg-left-bottom bg-gradient-to-r from-gray-300 to-gray-300 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-					>
-						contact@simonesalerno.it
-					</span>
-				</a>
-			</div>
-			<div class="flex flex-col gap-y-2">
-				<div>
-					<a
-						class="group transition-all duration-300 ease-in-out"
-						href="https://www.linkedin.com/in/simone-salerno/"
-						target="_blank"
-					>
-						<span
-							class="bg-left-bottom bg-gradient-to-r from-gray-300 to-gray-300 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-						>
-							LinkedIn
-						</span>
-					</a>
-				</div>
-				<div>
-					<a
-						class="group transition-all duration-300 ease-in-out"
-						href="https://github.com/novakoder/"
-						target="_blank"
-					>
-						<span
-							class="bg-left-bottom bg-gradient-to-r from-gray-300 to-gray-300 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-						>
-							GitHub
-						</span>
-					</a>
-				</div>
-				<div>
-					<a
-						class="group transition-all duration-300 ease-in-out"
-						href="https://www.instagram.com/novakoder/"
-						target="_blank"
-					>
-						<span
-							class="bg-left-bottom bg-gradient-to-r from-gray-300 to-gray-300 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-						>
-							Instagram
-						</span>
-					</a>
-				</div>
-				<div>
-					<a
-						class="group transition-all duration-300 ease-in-out"
-						href="https://twitter.com/novakoder/"
-						target="_blank"
-					>
-						<span
-							class="bg-left-bottom bg-gradient-to-r from-gray-300 to-gray-300 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-						>
-							X
-						</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+	<ContactSection />
 </div>
 
 <Footer />
