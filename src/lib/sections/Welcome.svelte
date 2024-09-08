@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { inview } from 'svelte-inview';
-	import type { Options } from 'svelte-inview';
+	import { inview, type Options } from 'svelte-inview';
 	import { language } from '$lib/utils';
 	import { get } from 'svelte/store';
 
 	let isInView: boolean;
 	const options: Options = {
-		rootMargin: '-50px'
+		rootMargin: '-50px',
+		unobserveOnEnter: true
 	};
 
 	const data = get(language);
@@ -18,8 +18,7 @@
 		const { inView } = event.detail;
 		isInView = inView;
 	}}
-	class:animate={isInView}
-	class="flex flex-col gap-8 xl:gap-14 2xl:gap-16"
+	class="flex flex-col gap-8 xl:gap-14 2xl:gap-16 {isInView ? 'animate' : 'opacity-0'}"
 >
 	<div class="flex flex-col tracking-tighter gap-y-6">
 		<div class="leading-none text-[5rem] xl:text-8xl 2xl:text-[7rem]">

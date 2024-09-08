@@ -30,28 +30,28 @@
 <FloatingNav />
 
 <div
-	class="flex items-center border-b border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 min-h-[80vh]"
+	class="flex items-center border-b border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-40 min-h-[80vh]"
 >
 	<WelcomeSection />
 </div>
 
 <div
 	id={data.language.projects.id}
-	class="px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
+	class="px-4 sm:px-16 lg:px-32 2xl:px-40 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
 	<ProjectsSection />
 </div>
 
 <div
 	id={data.language.about.id}
-	class="border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
+	class="border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-40 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
 	<AboutSection />
 </div>
 
 <div
 	id={data.language.contact.id}
-	class="border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-44 pt-20 pb-24 sm:pt-28 sm:pb-32"
+	class="border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-40 pt-20 pb-24 sm:pt-28 sm:pb-32"
 >
 	<ContactSection />
 </div>
