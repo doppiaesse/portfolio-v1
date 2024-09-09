@@ -15,20 +15,22 @@
 		<p class="text-6xl 2xl:text-7xl sign -mt-2">SS</p>
 	</div>
 
-	<div class="flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
+	<div
+		class="flex flex-col sm:flex-row gap-5 sm:gap-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
+	>
 		<div class="container w-1/2">
 			{#key currentMessage}
 				<div
 					in:fly={{ x: -100, duration: 500 }}
 					out:scale={{ duration: 500 }}
-					class="item flex justify-center text-6xl pb-2"
+					class="item flex sm:justify-center text-6xl pb-2 px-3 sm:px-0"
 				>
 					{currentMessage}
 				</div>
 			{/key}
 		</div>
 
-		<div class="flex justify-center gap-20 text-4xl w-1/2">
+		<div class="flex sm:justify-center gap-5 sm:gap-20 text-4xl w-1/2">
 			{#each Object.entries(languages) as [key, lang]}
 				<a
 					class="group transition-all duration-300 ease-in-out pt-3 mt-2 px-3"
