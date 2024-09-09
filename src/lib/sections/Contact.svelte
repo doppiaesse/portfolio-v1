@@ -1,11 +1,27 @@
-<script>
+<script lang="ts">
 	import { get } from 'svelte/store';
 	import { language } from '$lib/utils';
+	import { inview, type Options } from 'svelte-inview';
+
+	let isInView: boolean;
+	const options: Options = {
+		rootMargin: '-100px',
+		unobserveOnEnter: true
+	};
 
 	const data = get(language);
 </script>
 
-<div class="flex w-full flex-col tracking-tight justify-between gap-y-16 sm:gap-y-24">
+<div
+	use:inview={options}
+	on:inview_change={(event) => {
+		const { inView } = event.detail;
+		isInView = inView;
+	}}
+	class="flex w-full flex-col tracking-tight justify-between gap-y-16 sm:gap-y-24 {isInView
+		? 'animate'
+		: 'opacity-0'}"
+>
 	<div class="flex flex-col gap-y-10">
 		<h3 class="text-5xl md:text-6xl">{data.contact.title}</h3>
 		<p class="text-2xl md:text-3xl">

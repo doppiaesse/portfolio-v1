@@ -7,7 +7,7 @@
 
 <footer class="border-t border-white border-opacity-5 px-4 sm:px-8 lg:px-14">
 	<nav
-		class="flex items-start py-8 sm:pt-12 sm:pb-10 justify-between text-xl sm:text-2xl font-light"
+		class="flex items-start py-8 sm:pt-10 sm:pb-8 justify-between text-xl sm:text-2xl font-light"
 	>
 		<a href="#top" class="text-5xl sign opacity-90" on:click={handleAnchorClick}> SS </a>
 
