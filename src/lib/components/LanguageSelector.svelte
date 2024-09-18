@@ -29,7 +29,7 @@
 	<div>
 		<button
 			type="button"
-			class="flex justify-center gap-x-1.5 rounded-md w-16 py-3 text-base shadow-sm border border-white border-opacity-5 bg-dark"
+			class="flex justify-center gap-x-1.5 rounded-md w-16 py-3 text-base shadow-sm border border-white border-opacity-5"
 			id="menu-button"
 			aria-expanded={isOpen}
 			aria-haspopup="true"
