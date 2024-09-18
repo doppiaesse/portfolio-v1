@@ -4,7 +4,8 @@
 	import '../globals.css';
 
 	$: if (browser) {
-		document.documentElement.style.overflow = $menuStatus ? 'hidden' : '';
+		document.documentElement.classList.toggle('overflow-hidden', $menuStatus);
+		document.documentElement.classList.toggle('sm:overflow-auto', $menuStatus);
 	}
 </script>
 
