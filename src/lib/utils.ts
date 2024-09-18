@@ -20,6 +20,13 @@ export const languages = {
 	en: {
 		id: 'English',
 		greeting: 'Hello, world!',
+		head: {
+			title: 'Simone Salerno - Software developer',
+			description:
+				"Hi! I'm Simone, a passionate tech enthusiast and creative problem solver. This is my portfolio, where you can find something about me and my projects. Let's connect!",
+			keywords:
+				'Simone Salerno, doppiaesse, portfolio, projects repository, personal website, affordable website design, web designer, web developer, website redesign services, freelancer'
+		},
 		navigation: [
 			{ name: '// projects', href: '#projects' },
 			{ name: '// about', href: '#about' },
@@ -82,6 +89,13 @@ export const languages = {
 	it: {
 		id: 'Italiano',
 		greeting: 'Ciao, mondo!',
+		head: {
+			title: 'Simone Salerno - Sviluppatore software',
+			description:
+				'Ciao! Sono Simone, sviluppatore appassionato di tecnologia e creativo problem-solver. Questo è il mio portfolio, dove puoi trovare qualcosa su di me e sui miei progetti. Connettiamoci!',
+			keywords:
+				'Simone Salerno, doppiaesse, portfolio, repository progetti, sito web personale, progettazione di siti web convenienti, web designer, sviluppatore web, progettazione software, freelancer'
+		},
 		navigation: [
 			{ name: '// progetti', href: '#progetti' },
 			{ name: '// chi sono', href: '#chi-sono' },

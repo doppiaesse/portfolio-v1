@@ -14,15 +14,9 @@
 </script>
 
 <svelte:head>
-	<title>Ciao! Sono Simone - Sviluppatore software</title>
-	<meta
-		name="description"
-		content="Ciao! Sono Simone, sviluppatore appassionato di tecnologia e creativo problem-solver. Questo è il mio portfolio, dove puoi trovare qualcosa su di me e sui miei progetti. Connettiamoci!"
-	/>
-	<meta
-		name="keywords"
-		content="Simone Salerno, doppiaesse, portfolio, repository progetti, sito web personale, progettazione di siti web convenienti, web designer, sviluppatore web, progettazione software, freelancer"
-	/>
+	<title>{data.language.head.title}</title>
+	<meta name="description" content={data.language.head.description} />
+	<meta name="keywords" content={data.language.head.keywords} />
 	<meta name="author" content="Simone Salerno" />
 </svelte:head>
 

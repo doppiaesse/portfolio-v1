@@ -33,7 +33,7 @@
 		<div class="flex sm:justify-center gap-5 sm:gap-20 text-4xl w-1/2">
 			{#each Object.entries(languages) as [key, lang]}
 				<a
-					class="group transition-all duration-300 ease-in-out pt-3 mt-2 px-3"
+					class="group transition-all duration-300 ease-in-out mt-4 py-1 px-3"
 					href="/{key}"
 					on:mouseenter={() => handleMouseEnter(lang.greeting)}
 				>
