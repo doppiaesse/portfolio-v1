@@ -45,6 +45,18 @@ export const languages = {
 			title: 'Projects',
 			projects: [
 				{
+					id: 'lrl-elettrica',
+					title: 'L.R.L. Elettrica',
+					description:
+						'Website and assistance for the company L.R.L. Elettrica, specialized in electrical systems and other home solutions.'
+				},
+				{
+					id: 'ss-designs',
+					title: '[esse designs]',
+					description:
+						'Website and graphics designs for cryptocurrency projects, including logos, banners and social media posts.'
+				},
+				{
 					id: 'lets-code-italia',
 					title: "Let's Code Italia",
 					description: 'E-learning platform to learn how to code in a simple and fun way.'
@@ -113,6 +125,18 @@ export const languages = {
 			id: 'progetti',
 			title: 'Progetti',
 			projects: [
+				{
+					id: 'lrl-elettrica',
+					title: 'L.R.L. Elettrica',
+					description:
+						"Sito web e assistenza per l'azienda L.R.L. Elettrica, specializzata in impianti elettrici e altre soluzioni per la casa."
+				},
+				{
+					id: 'ss-designs',
+					title: '[esse designs]',
+					description:
+						'Progettazione di siti web e grafiche per progetti di criptovalute, inclusi loghi, banner e post su social media.'
+				},
 				{
 					id: 'lets-code-italia',
 					title: "Let's Code Italia",
