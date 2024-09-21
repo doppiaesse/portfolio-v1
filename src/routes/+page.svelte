@@ -8,6 +8,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Simone Salerno - Welcome</title>
+</svelte:head>
+
 <div class="flex flex-col h-screen">
 	<div
 		class="px-4 sm:px-8 lg:px-14 pt-8 pb-7 sm:py-10 border-b border-white border-opacity-5 shadow-md"
@@ -16,21 +20,21 @@
 	</div>
 
 	<div
-		class="flex flex-col sm:flex-row gap-5 sm:gap-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
+		class="flex flex-col gap-5 sm:gap-10 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
 	>
-		<div class="container w-1/2">
+		<div class="grid">
 			{#key currentMessage}
 				<div
 					in:fly={{ x: -100, duration: 500 }}
 					out:scale={{ duration: 500 }}
-					class="item flex sm:justify-center text-6xl pb-2 px-3 sm:px-0"
+					class="item flex justify-center text-5xl sm:text-8xl pb-2"
 				>
 					{currentMessage}
 				</div>
 			{/key}
 		</div>
 
-		<div class="flex sm:justify-center gap-5 sm:gap-20 text-4xl w-1/2">
+		<div class="flex justify-center gap-5 sm:gap-20 text-4xl">
 			{#each Object.entries(languages) as [key, lang]}
 				<a
 					class="group transition-all duration-300 ease-in-out mt-4 py-1 px-3"
@@ -49,10 +53,6 @@
 </div>
 
 <style>
-	.container {
-		display: grid;
-	}
-
 	.item {
 		grid-column-start: 1;
 		grid-column-end: 2;

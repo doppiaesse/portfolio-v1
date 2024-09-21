@@ -4,10 +4,10 @@
 	export let text: string[];
 </script>
 
-<div class="xl:-mt-2 xl:-my-[0.4rem] -my-[0.2rem] typewriter">
+<div class="typewriter">
 	<Typewriter mode="loop" interval={60}>
 		{#each text as line}
-			<span>{line}</span>
+			<h2 class="flex">{line}</h2>
 		{/each}
 	</Typewriter>
 </div>

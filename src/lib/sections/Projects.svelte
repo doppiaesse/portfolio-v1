@@ -21,7 +21,7 @@
 	}}
 	class="flex flex-col gap-y-14 sm:gap-y-16 {isInView ? 'animate' : 'opacity-0'}"
 >
-	<h2 class="text-5xl sm:text-6xl 2xl:text-7xl font-light">
+	<h2 class="text-5xl font-normal sm:text-6xl 2xl:text-7xl">
 		{data.projects.title}
 	</h2>
 

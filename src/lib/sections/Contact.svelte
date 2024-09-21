@@ -22,8 +22,8 @@
 		? 'animate'
 		: 'opacity-0'}"
 >
-	<div class="flex flex-col gap-y-10">
-		<h3 class="text-5xl md:text-6xl">{data.contact.title}</h3>
+	<div class="flex flex-col gap-y-6">
+		<h3 class="text-5xl md:text-6xl font-normal">{data.contact.title}</h3>
 		<p class="text-2xl md:text-3xl">
 			{data.contact.subtitle}
 		</p>

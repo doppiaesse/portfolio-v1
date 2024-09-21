@@ -9,7 +9,9 @@
 	<nav
 		class="flex items-start py-8 sm:pt-10 sm:pb-8 justify-between text-xl sm:text-2xl font-light"
 	>
-		<a href="#top" class="text-5xl sign opacity-90" on:click={handleAnchorClick}> SS </a>
+		<a href="#top" on:click={handleAnchorClick}>
+			<img class="h-16 sm:h-20" src="logo/logo-light.svg" alt="Simone Salerno logo" />
+		</a>
 
 		<div class="flex flex-col sm:flex-row gap-x-7 opacity-80">
 			{#each routes as route (route.name)}
@@ -18,7 +20,7 @@
 		</div>
 	</nav>
 	<div
-		class="flex items-center justify-between text-md sm:text-lg font-light pt-2 sm:pt-0 pb-7 opacity-70"
+		class="flex items-center justify-between text-md sm:text-lg text-neutral-200 font-light pt-2 pb-7 opacity-70"
 	>
 		Copyright © 2023-2024 - Simone Salerno
 	</div>

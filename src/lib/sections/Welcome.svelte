@@ -20,20 +20,17 @@
 	}}
 	class="flex flex-col gap-8 xl:gap-14 2xl:gap-16 {isInView ? 'animate' : 'opacity-0'}"
 >
-	<div class="flex flex-col tracking-tighter gap-y-6">
-		<div class="leading-none text-[5rem] xl:text-8xl 2xl:text-[7rem]">
-			<p>{data.welcome.title}</p>
-		</div>
+	<div class="flex flex-col gap-y-5">
+		<h1 class="tracking-tight font-normal text-[5rem] xl:text-8xl 2xl:text-[7rem] -ms-1">
+			{data.welcome.title}
+		</h1>
 
-		<div class="text-3xl xl:text-5xl 2xl:text-[3.5rem] whitespace-nowrap italic tracking-tight">
-			<div class="flex">
-				<span class="me-2 -mt-[0.2rem] mb-[0.2rem]"> > </span>
-				{#await import('$lib/components/Typewriter.svelte')}
-					<span>Loading...</span>
-				{:then c}
-					<svelte:component this={c.default} text={data.welcome.typewriter} />
-				{/await}
-			</div>
+		<div class="flex text-3xl xl:text-5xl italic">
+			{#await import('$lib/components/Typewriter.svelte')}
+				<span>Loading...</span>
+			{:then c}
+				<svelte:component this={c.default} text={data.welcome.typewriter} />
+			{/await}
 		</div>
 	</div>
 

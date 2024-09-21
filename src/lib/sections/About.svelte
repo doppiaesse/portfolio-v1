@@ -20,7 +20,9 @@
 	}}
 	class="flex flex-col gap-y-14 sm:gap-y-16 {isInView ? 'animate' : 'opacity-0'}"
 >
-	<h2 class="text-5xl sm:text-6xl 2xl:text-7xl whitespace-nowrap">{data.about.title}</h2>
+	<h2 class="text-5xl sm:text-6xl 2xl:text-7xl font-normal">
+		{data.about.title}
+	</h2>
 	<div class="text-2xl 2xl:text-3xl">
 		{#each data.about.description as paragraph}
 			{paragraph}
