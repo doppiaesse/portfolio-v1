@@ -21,7 +21,9 @@
 	class="flex flex-col gap-8 xl:gap-14 2xl:gap-16 {isInView ? 'animate' : 'opacity-0'}"
 >
 	<div class="flex flex-col gap-y-5">
-		<h1 class="tracking-tight font-normal text-[5rem] xl:text-8xl 2xl:text-[7rem] -ms-1">
+		<h1
+			class="tracking-tight font-normal text-[5rem] xl:text-8xl 2xl:text-[7rem] -ms-1 leading-none"
+		>
 			{data.welcome.title}
 		</h1>
 
