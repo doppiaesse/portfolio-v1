@@ -14,7 +14,7 @@
 	const routes = get(language).navigation;
 </script>
 
-<header id="top" class="border-b border-white border-opacity-5 shadow-md">
+<header id="top" class="border-b border-white border-opacity-5">
 	<nav class="flex items-center px-4 sm:px-8 lg:px-14 py-8 justify-between text-3xl font-light">
 		<a href="#top" on:click={handleAnchorClick}>
 			<img class="h-16 sm:h-20" src="logo/logo-light.svg" alt="Simone Salerno logo" />
@@ -41,7 +41,7 @@
 				</button>
 
 				<div
-					class="fixed top-0 left-0 w-screen h-screen bg-nav-mobile z-10 flex flex-col items-center justify-center"
+					class="fixed top-0 left-0 w-screen h-screen z-10 flex flex-col items-center justify-center bg-nav-mobile"
 					transition:fade={{ duration: 300 }}
 				>
 					<div class="flex flex-col gap-y-3">

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { menuStatus } from '$lib/utils';
-	import '../globals.css';
+	import '$lib/style/globals.css';
 
 	$: if (browser) {
 		document.documentElement.classList.toggle('overflow-hidden', $menuStatus);

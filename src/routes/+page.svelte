@@ -13,24 +13,20 @@
 </svelte:head>
 
 <div class="flex flex-col h-screen">
-	<div
-		class="px-4 sm:px-8 lg:px-14 pt-8 pb-7 sm:py-10 border-b border-white border-opacity-5 shadow-md"
-	>
-		<p class="text-6xl 2xl:text-7xl sign -mt-2">SS</p>
+	<div class="px-4 sm:px-8 lg:px-14 py-8 border-b border-white border-opacity-5">
+		<img class="h-16 sm:h-20" src="logo/logo-light.svg" alt="Simone Salerno logo" />
 	</div>
 
-	<div
-		class="flex flex-col gap-5 sm:gap-10 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
-	>
+	<div class="flex flex-col h-full justify-center items-center gap-5 sm:gap-8 text-center">
 		<div class="grid">
 			{#key currentMessage}
-				<div
+				<h2
 					in:fly={{ x: -100, duration: 500 }}
 					out:scale={{ duration: 500 }}
-					class="item flex justify-center text-5xl sm:text-8xl pb-2"
+					class="item font-normal flex justify-center text-5xl sm:text-8xl pb-2"
 				>
 					{currentMessage}
-				</div>
+				</h2>
 			{/key}
 		</div>
 
