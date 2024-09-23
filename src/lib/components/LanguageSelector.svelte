@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { language, languages } from '$lib/utils';
+	import { languages, selectedLanguage } from '$lib/utils';
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
 	import { fade, fly } from 'svelte/transition';
@@ -22,7 +22,8 @@
 		};
 	});
 
-	const id = get(language).id;
+	const data = get(languages);
+	const selected = get(selectedLanguage);
 </script>
 
 <div class="relative inline-block text-left">
@@ -35,9 +36,9 @@
 			aria-haspopup="true"
 			on:click={toggleDropdown}
 		>
-			{#each Object.entries(languages) as [key, lang]}
-				{#if lang.id === id}
-					{key.toUpperCase()}
+			{#each data as language}
+				{#if selected === language.code}
+					{language.code.toUpperCase()}
 				{/if}
 			{/each}
 			<svg
@@ -66,10 +67,15 @@
 			tabindex="-1"
 		>
 			<div class="py-1" role="none">
-				{#each Object.entries(languages) as [key, lang]}
-					{#if lang.id !== id}
-						<a data-sveltekit-reload href="/{key}" class="block px-4 py-2 text-sm" role="menuitem">
-							{key.toUpperCase()}
+				{#each data as language}
+					{#if selected !== language.code}
+						<a
+							data-sveltekit-reload
+							href="/{language.code}"
+							class="block px-4 py-2 text-sm"
+							role="menuitem"
+						>
+							{language.code.toUpperCase()}
 						</a>
 					{/if}
 				{/each}

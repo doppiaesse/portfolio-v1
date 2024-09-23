@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { inview, type Options } from 'svelte-inview';
 	import { language } from '$lib/utils';
 	import { get } from 'svelte/store';
@@ -42,4 +42,4 @@
 			{data.welcome.description[1]}
 		</p>
 	</div>
-</div>
+</div> -->

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { handleAnchorClick, language } from '$lib/utils';
+	import { handleAnchorClick, translation } from '$lib/utils';
 	import { get } from 'svelte/store';
 	import { fade } from 'svelte/transition';
 	import MenuOpen from './icons/OpenMenu.svelte';
@@ -9,7 +9,7 @@
 		menuStatus.update((value) => !value);
 	}
 
-	const routes = get(language).navigation;
+	const data = get(translation);
 
 	let scroll: number;
 	$: show = scroll > 350 && !$menuStatus ? true : false;
@@ -30,8 +30,8 @@
 					<img class="h-10" src="logo/logo-light.svg" alt="Simone Salerno logo" />
 				</a>
 
-				{#each routes as route (route.name)}
-					<a href={route.href} class="px-3 sm:flex hidden" on:click={handleAnchorClick}
+				{#each data.navigation as route (route.name)}
+					<a href={route.link} class="px-3 sm:flex hidden" on:click={handleAnchorClick}
 						>{route.name}</a
 					>
 				{/each}

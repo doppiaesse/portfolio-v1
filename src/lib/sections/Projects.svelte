@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import { inview, type Options } from 'svelte-inview';
 	import { get } from 'svelte/store';
@@ -35,4 +35,4 @@
 			/>
 		{/each}
 	</div>
-</div>
+</div> -->

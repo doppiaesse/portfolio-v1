@@ -1,7 +1,7 @@
 <script lang="ts">
 	import MenuClose from './icons/CloseMenu.svelte';
 	import MenuOpen from './icons/OpenMenu.svelte';
-	import { handleAnchorClick, language } from '$lib/utils';
+	import { handleAnchorClick, translation } from '$lib/utils';
 	import { get } from 'svelte/store';
 	import { fade } from 'svelte/transition';
 	import { menuStatus } from '$lib/utils';
@@ -11,7 +11,7 @@
 		menuStatus.update((value) => !value);
 	}
 
-	const routes = get(language).navigation;
+	const data = get(translation);
 </script>
 
 <header id="top" class="border-b border-white border-opacity-5">
@@ -21,8 +21,8 @@
 		</a>
 
 		<div class="hidden sm:flex gap-x-7">
-			{#each routes as route (route.name)}
-				<a class="leading-normal" href={route.href} on:click={handleAnchorClick}>{route.name}</a>
+			{#each data.navigation as route (route.name)}
+				<a class="leading-normal" href={route.link} on:click={handleAnchorClick}>{route.name}</a>
 			{/each}
 
 			<div class="ms-2">
@@ -45,9 +45,9 @@
 					transition:fade={{ duration: 300 }}
 				>
 					<div class="flex flex-col gap-y-3">
-						{#each routes as route (route.name)}
+						{#each data.navigation as route (route.name)}
 							<a
-								href={route.href}
+								href={route.link}
 								on:click={(event) => (handleAnchorClick(event), handleMenuClick())}>{route.name}</a
 							>
 						{/each}

@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { get } from 'svelte/store';
 	import { language } from '$lib/utils';
 	import { inview, type Options } from 'svelte-inview';
@@ -45,4 +45,4 @@
 			</a>
 		{/each}
 	</div>
-</div>
+</div> -->

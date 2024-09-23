@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { handleAnchorClick, language } from '$lib/utils';
+	import { handleAnchorClick, translation } from '$lib/utils';
 	import { get } from 'svelte/store';
 
-	const routes = get(language).navigation;
+	const data = get(translation);
 </script>
 
 <footer class="border-t border-white border-opacity-5 px-4 sm:px-8 lg:px-14">
@@ -14,8 +14,8 @@
 		</a>
 
 		<div class="flex flex-col sm:flex-row gap-x-7 opacity-80">
-			{#each routes as route (route.name)}
-				<a href={route.href} on:click={handleAnchorClick}>{route.name}</a>
+			{#each data.navigation as route (route.name)}
+				<a href={route.link} on:click={handleAnchorClick}>{route.name}</a>
 			{/each}
 		</div>
 	</nav>
