@@ -18,16 +18,16 @@
 		const { inView } = event.detail;
 		isInView = inView;
 	}}
-	class="flex flex-col gap-8 xl:gap-14 2xl:gap-16 {isInView ? 'animate' : 'opacity-0'}"
+	class="flex flex-col gap-8 lg:gap-14 2xl:gap-16 {isInView ? 'animate' : 'opacity-0'}"
 >
 	<div class="flex flex-col gap-y-5">
 		<h1
-			class="tracking-tight font-normal text-[5rem] xl:text-8xl 2xl:text-[7rem] -ms-1 leading-none"
+			class="tracking-tight font-normal text-[5rem] lg:text-8xl 2xl:text-[7rem] -ms-1 leading-none md:whitespace-nowrap"
 		>
 			{data.welcome.title}
 		</h1>
 
-		<div class="flex text-3xl xl:text-5xl italic">
+		<div class="flex text-3xl lg:text-5xl italic">
 			{#await import('$lib/components/Typewriter.svelte')}
 				<span>Loading...</span>
 			{:then c}
@@ -36,7 +36,7 @@
 		</div>
 	</div>
 
-	<div class="flex flex-col text-2xl xl:text-[1.7rem] 2xl:text-3xl opacity-80 gap-y-4 xl:gap-y-6">
+	<div class="flex flex-col text-2xl lg:text-[1.7rem] 2xl:text-3xl opacity-80 gap-y-4 xl:gap-y-6">
 		<p>{data.welcome.description[0]}</p>
 		<p>
 			{data.welcome.description[1]}
