@@ -20,7 +20,7 @@
 			<img class="h-16 sm:h-20" src="logo/logo-light.svg" alt="Simone Salerno logo" />
 		</a>
 
-		<div class="hidden sm:flex gap-x-7">
+		<div class="hidden md:flex gap-x-7">
 			{#each data.global.navigation as route (route.name)}
 				<a class="leading-normal" href={route.link} on:click={handleAnchorClick}>{route.name}</a>
 			{/each}
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 
-		<div class="flex sm:hidden w-[40px] h-[40px]">
+		<div class="flex md:hidden w-[40px] h-[40px]">
 			{#if $menuStatus}
 				<div class="fixed z-20 left-6 top-8">
 					<LanguageSelector />

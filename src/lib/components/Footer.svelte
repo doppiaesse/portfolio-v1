@@ -13,7 +13,7 @@
 			<img class="h-16 sm:h-20" src="logo/logo-light.svg" alt="Simone Salerno logo" />
 		</a>
 
-		<div class="flex flex-col sm:flex-row gap-x-7 opacity-80">
+		<div class="flex flex-col md:flex-row gap-x-7 opacity-80">
 			{#each data.global.navigation as route (route.name)}
 				<a href={route.link} on:click={handleAnchorClick}>{route.name}</a>
 			{/each}
