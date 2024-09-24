@@ -14,7 +14,7 @@
 		</a>
 
 		<div class="flex flex-col sm:flex-row gap-x-7 opacity-80">
-			{#each data.navigation as route (route.name)}
+			{#each data.global.navigation as route (route.name)}
 				<a href={route.link} on:click={handleAnchorClick}>{route.name}</a>
 			{/each}
 		</div>

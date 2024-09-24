@@ -30,7 +30,7 @@
 					<img class="h-10" src="logo/logo-light.svg" alt="Simone Salerno logo" />
 				</a>
 
-				{#each data.navigation as route (route.name)}
+				{#each data.global.navigation as route (route.name)}
 					<a href={route.link} class="px-3 sm:flex hidden" on:click={handleAnchorClick}
 						>{route.name}</a
 					>

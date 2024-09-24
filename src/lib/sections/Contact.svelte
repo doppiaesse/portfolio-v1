@@ -1,6 +1,6 @@
-<!-- <script lang="ts">
+<script lang="ts">
 	import { get } from 'svelte/store';
-	import { language } from '$lib/utils';
+	import { translation } from '$lib/utils';
 	import { inview, type Options } from 'svelte-inview';
 
 	let isInView: boolean;
@@ -9,7 +9,7 @@
 		unobserveOnEnter: true
 	};
 
-	const data = get(language);
+	const data = get(translation);
 </script>
 
 <div
@@ -30,11 +30,11 @@
 	</div>
 
 	<div class="flex flex-col text-2xl gap-y-2">
-		{#each data.contact.links as link}
+		{#each data.contact.links as link, index}
 			<a
 				class="group transition-all duration-300 ease-in-out
-                    {link.name == 'contact@simonesalerno.it' ? 'text-3xl md:text-4xl mb-2' : ''}"
-				href={link.href}
+					{index === 0 ? 'text-3xl md:text-4xl mb-2' : ''}"
+				href={link.link}
 				target="_blank"
 			>
 				<span
@@ -45,4 +45,4 @@
 			</a>
 		{/each}
 	</div>
-</div> -->
+</div>

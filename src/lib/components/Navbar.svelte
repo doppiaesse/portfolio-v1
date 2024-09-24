@@ -21,7 +21,7 @@
 		</a>
 
 		<div class="hidden sm:flex gap-x-7">
-			{#each data.navigation as route (route.name)}
+			{#each data.global.navigation as route (route.name)}
 				<a class="leading-normal" href={route.link} on:click={handleAnchorClick}>{route.name}</a>
 			{/each}
 
@@ -45,7 +45,7 @@
 					transition:fade={{ duration: 300 }}
 				>
 					<div class="flex flex-col gap-y-3">
-						{#each data.navigation as route (route.name)}
+						{#each data.global.navigation as route (route.name)}
 							<a
 								href={route.link}
 								on:click={(event) => (handleAnchorClick(event), handleMenuClick())}>{route.name}</a

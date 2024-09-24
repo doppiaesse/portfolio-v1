@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import type { GlobalTranslation, Language } from './types';
+import type { Language, Translation } from './types';
 
 export function handleAnchorClick(event: MouseEvent) {
 	event.preventDefault();
@@ -15,6 +15,6 @@ export function handleAnchorClick(event: MouseEvent) {
 }
 
 export const menuStatus = writable(false);
-export const translation = writable<GlobalTranslation>();
+export const translation = writable<Translation>();
 export const languages = writable<Language[]>();
 export const selectedLanguage = writable<string>();

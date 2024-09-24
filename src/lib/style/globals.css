@@ -36,11 +36,6 @@ button {
 	margin-bottom: 0.2rem;
 }
 
-.highlight {
-	display: inline;
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, rgba(167, 139, 250, 0.6) 65%);
-}
-
 ::-webkit-scrollbar {
 	width: 5px;
 }
@@ -55,24 +50,6 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
 	background: rgba(255, 255, 255, 0.08);
-}
-
-.sign {
-	color: #c6e2ff;
-	animation: neon 0.08s ease-in-out infinite alternate;
-}
-
-@keyframes neon {
-	from {
-		text-shadow: 0 0 6px rgba(147, 112, 219, 0.92), 0 0 30px rgba(147, 112, 219, 0.34),
-			0 0 12px rgba(147, 112, 219, 0.52), 0 0 21px rgba(147, 112, 219, 0.92),
-			0 0 34px rgba(147, 112, 219, 0.78), 0 0 54px rgba(147, 112, 219, 0.92);
-	}
-	to {
-		text-shadow: 0 0 6px rgba(147, 112, 219, 0.98), 0 0 30px rgba(147, 112, 219, 0.42),
-			0 0 12px rgba(147, 112, 219, 0.58), 0 0 22px rgba(147, 112, 219, 0.84),
-			0 0 38px rgba(147, 112, 219, 0.88), 0 0 60px rgba(147, 112, 219, 1);
-	}
 }
 
 .animate {

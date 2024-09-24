@@ -1,6 +1,6 @@
-<!-- <script lang="ts">
+<script lang="ts">
+	import { translation } from '$lib/utils';
 	import { inview, type Options } from 'svelte-inview';
-	import { language } from '$lib/utils';
 	import { get } from 'svelte/store';
 
 	let isInView: boolean;
@@ -9,7 +9,7 @@
 		unobserveOnEnter: true
 	};
 
-	const data = get(language);
+	const data = get(translation);
 </script>
 
 <div
@@ -18,7 +18,7 @@
 		const { inView } = event.detail;
 		isInView = inView;
 	}}
-	class="flex flex-col gap-8 xl:gap-14 2xl:gap-16 {isInView ? 'animate' : 'opacity-0'}"
+	class="flex flex-col gap-8 lg:gap-12 2xl:gap-16 {isInView ? 'animate' : 'opacity-0'}"
 >
 	<div class="flex flex-col gap-y-5">
 		<h1
@@ -37,9 +37,8 @@
 	</div>
 
 	<div class="flex flex-col text-2xl xl:text-[1.7rem] 2xl:text-3xl opacity-80 gap-y-4 xl:gap-y-6">
-		<p>{data.welcome.description[0]}</p>
-		<p>
-			{data.welcome.description[1]}
-		</p>
+		{#each data.welcome.description.blocks as paragraph}
+			<p>{paragraph.data.text}</p>
+		{/each}
 	</div>
-</div> -->
+</div>
