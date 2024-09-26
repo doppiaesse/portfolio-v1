@@ -19,7 +19,7 @@
 				{title}
 			</h5>
 
-			<p class="mb-3 text-gray-300">
+			<p class="mb-3 text-base lg:text-xl text-gray-300">
 				{description}
 			</p>
 		</div>

@@ -23,7 +23,7 @@
 	<h2 class="text-5xl sm:text-6xl 2xl:text-7xl font-normal">
 		{data.about.title}
 	</h2>
-	<div class="flex flex-col text-2xl lg:text-[1.7rem] 2xl:text-3xl gap-y-4 lg:gap-y-6">
+	<div class="flex flex-col text-2xl lg:text-[1.7rem] 2xl:text-3xl gap-y-4 lg:gap-y-6 2xl:gap-y-8">
 		{#each data.about.description.blocks as paragraph}
 			<p>{paragraph.data.text}</p>
 		{/each}
