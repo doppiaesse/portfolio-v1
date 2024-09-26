@@ -13,6 +13,7 @@
 	translation.set({
 		global: data.global,
 		welcome: data.welcome,
+		projects: data.projects,
 		about: data.about,
 		contact: data.contact
 	});

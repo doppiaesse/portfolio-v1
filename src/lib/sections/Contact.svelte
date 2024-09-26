@@ -24,7 +24,7 @@
 >
 	<div class="flex flex-col gap-y-6">
 		<h3 class="text-5xl md:text-6xl font-normal">{data.contact.title}</h3>
-		<p class="text-2xl md:text-3xl">
+		<p class="text-2xl md:text-[1.7rem] xl:text-3xl">
 			{data.contact.subtitle}
 		</p>
 	</div>

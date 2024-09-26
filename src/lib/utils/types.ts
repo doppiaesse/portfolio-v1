@@ -73,9 +73,31 @@ export interface Contact {
 	translations: ContactTranslation[];
 }
 
+export interface ProjectImage {
+	directus_files_id: string;
+	id: number;
+	project_id: number;
+}
+
+export interface ProjectTranslation {
+	id: number;
+	project_id: number;
+	languages_code: string;
+	name: string;
+	title: string;
+	description: string;
+	image_captions: string[];
+}
+
+export interface Project {
+	images: ProjectImage[];
+	translations: ProjectTranslation[];
+}
+
 export interface Translation {
 	global: GlobalTranslation;
 	welcome: WelcomeTranslation;
+	projects: Project[];
 	about: AboutTranslation;
 	contact: ContactTranslation;
 }

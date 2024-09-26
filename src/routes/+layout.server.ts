@@ -10,7 +10,8 @@ import type {
 	AboutTranslation,
 	About,
 	ContactTranslation,
-	Contact
+	Contact,
+	Project
 } from '$lib/utils/types';
 
 export const load = (async ({
@@ -20,6 +21,7 @@ export const load = (async ({
 	languages: Language[];
 	global: GlobalTranslation;
 	welcome: WelcomeTranslation;
+	projects: Project[];
 	about: AboutTranslation;
 	contact: ContactTranslation;
 }> => {
@@ -60,6 +62,23 @@ export const load = (async ({
 			},
 			fields: [{ translations: ['*'] }],
 			limit: 1
+		})
+	);
+
+	const projects = await directus.request<Project[]>(
+		readItems('projects', {
+			deep: {
+				translations: {
+					_filter: {
+						_and: [
+							{
+								languages_code: { _eq: languageCode }
+							}
+						]
+					}
+				}
+			},
+			fields: [{ images: ['*'], translations: ['*'] }]
 		})
 	);
 
@@ -104,6 +123,7 @@ export const load = (async ({
 		languages,
 		global: global.translations[0],
 		welcome: welcome.translations[0],
+		projects,
 		about: about.translations[0],
 		contact: contact.translations[0]
 	};
