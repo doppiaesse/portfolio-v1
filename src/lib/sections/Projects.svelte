@@ -19,7 +19,7 @@
 		const { inView } = event.detail;
 		isInView = inView;
 	}}
-	class="flex flex-col gap-y-14 sm:gap-y-16 {isInView ? 'animate' : 'opacity-0'}"
+	class="flex flex-col gap-y-14 sm:gap-y-16 2xl:gap-y-[4.5rem] {isInView ? 'animate' : 'opacity-0'}"
 >
 	<h2 class="text-5xl font-normal sm:text-6xl 2xl:text-7xl">
 		{data.projects[0].translations[0].title}

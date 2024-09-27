@@ -18,7 +18,7 @@
 		const { inView } = event.detail;
 		isInView = inView;
 	}}
-	class="flex flex-col gap-y-12 {isInView ? 'animate' : 'opacity-0'}"
+	class="flex flex-col gap-y-14 sm:gap-y-16 2xl:gap-y-[4.5rem] {isInView ? 'animate' : 'opacity-0'}"
 >
 	<h2 class="text-5xl sm:text-6xl 2xl:text-7xl font-normal">
 		{data.about.title}
