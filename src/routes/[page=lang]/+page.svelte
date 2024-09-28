@@ -28,7 +28,7 @@
 </div>
 
 <div
-	id={data.global.navigation[0].link}
+	id={sanitizeId(data.global.navigation[0].link)}
 	class="px-4 sm:px-16 lg:px-32 2xl:px-40 pt-20 pb-24 sm:pt-28 sm:pb-32 2xl:py-36"
 >
 	<ProjectsSection />
