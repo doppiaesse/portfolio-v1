@@ -101,3 +101,10 @@ export interface Translation {
 	about: AboutTranslation;
 	contact: ContactTranslation;
 }
+
+// Sitemap page object
+export interface Page {
+	slug: string;
+	lastMod: string;
+	priority: number;
+}
