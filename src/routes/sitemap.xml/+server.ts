@@ -3,8 +3,8 @@ import type { RequestHandler } from './$types';
 
 const site = 'https://simonesalerno.it';
 const pages: Page[] = [
-	{ slug: 'it', lastMod: '2024-09-28', priority: 1 },
-	{ slug: 'en', lastMod: '2024-09-28', priority: 1 }
+	{ slug: 'it', lastMod: '2024-09-28', priority: 1, hreflang: 'it' },
+	{ slug: 'en', lastMod: '2024-09-28', priority: 1, hreflang: 'en' }
 ];
 
 export const GET: RequestHandler = async () => {
@@ -30,8 +30,19 @@ const sitemap = (pages: Page[]) => `<?xml version="1.0" encoding="UTF-8" ?>
   <url>
     <loc>${site}/${page.slug}</loc>
     <changefreq>daily</changefreq>
-	<lastmod>${page.lastMod}</lastmod>
+    <lastmod>${page.lastMod}</lastmod>
     <priority>${page.priority}</priority>
+    ${pages
+			.filter((altPage) => altPage.slug !== page.slug)
+			.map(
+				(altPage) => `
+    <xhtml:link
+      rel="alternate"
+      hreflang="${altPage.hreflang}"
+      href="${site}/${altPage.slug}"
+    />`
+			)
+			.join('')}
   </url>
   `
 		)

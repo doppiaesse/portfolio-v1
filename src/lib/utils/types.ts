@@ -107,4 +107,5 @@ export interface Page {
 	slug: string;
 	lastMod: string;
 	priority: number;
+	hreflang: string;
 }
