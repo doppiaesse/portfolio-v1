@@ -26,7 +26,7 @@ export const load = (async ({
 	contact: ContactTranslation;
 }> => {
 	const directus = getDirectusInstance(fetch);
-	const languageCode = params.page === 'it' ? 'it' : 'en';
+	const languageCode = ['it', 'progetti'].includes(params.page || '') ? 'it' : 'en';
 	const languages = await directus.request<Language[]>(readItems('languages'));
 
 	const global = await directus.request<Global>(

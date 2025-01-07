@@ -14,36 +14,33 @@
 </script>
 
 <svelte:head>
-	<title>{data.global.title}</title>
-	<meta name="description" content={data.global.description} />
-	<meta name="keywords" content={data.global.keywords.join(', ')} />
-	<meta name="author" content="Simone Salerno" />
+	<title>Simone Salerno - {data.global.title}</title>
 </svelte:head>
 
 <div
 	id="top"
-	class="flex items-center border-b border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-40 min-h-[80vh]"
+	class="flex items-center border-b border-white border-opacity-5 px-4 sm:px-8 lg:px-14 min-h-[80vh]"
 >
 	<WelcomeSection />
 </div>
 
 <div
 	id={sanitizeId(data.global.navigation[0].link)}
-	class="px-4 sm:px-16 lg:px-32 2xl:px-40 pt-20 pb-24 sm:pt-28 sm:pb-32 2xl:py-36"
+	class="px-4 sm:px-8 lg:px-14 pt-20 pb-24 sm:pt-28 sm:pb-32 2xl:py-36"
 >
 	<ProjectsSection />
 </div>
 
 <div
 	id={sanitizeId(data.global.navigation[1].link)}
-	class="border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-40 pt-20 pb-24 sm:pt-28 sm:pb-32 2xl:py-36"
+	class="border-t border-white border-opacity-5 px-4 sm:px-8 lg:px-14 pt-20 pb-24 sm:pt-28 sm:pb-32 2xl:py-36"
 >
 	<AboutSection />
 </div>
 
 <div
 	id={sanitizeId(data.global.navigation[2].link)}
-	class="border-t border-white border-opacity-5 px-4 sm:px-16 lg:px-32 2xl:px-40 pt-20 pb-24 sm:pt-28 sm:pb-32 2xl:py-36"
+	class="border-t border-white border-opacity-5 px-4 sm:px-8 lg:px-14 pt-20 pb-24 sm:pt-28 sm:pb-32 2xl:py-36"
 >
 	<ContactSection />
 </div>

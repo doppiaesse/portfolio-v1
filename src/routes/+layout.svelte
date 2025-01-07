@@ -22,9 +22,13 @@
 		document.documentElement.classList.toggle('overflow-hidden', $menuStatus);
 		document.documentElement.classList.toggle('sm:overflow-auto', $menuStatus);
 	}
-
-	console.log(data);
 </script>
+
+<svelte:head>
+	<meta name="description" content={data.global.description} />
+	<meta name="keywords" content={data.global.keywords.join(', ')} />
+	<meta name="author" content="Simone Salerno" />
+</svelte:head>
 
 <div class="w-[95%] lg:w-[90%] xl:w-[85%] 2xl:w-[75%] mx-auto relative">
 	<Navbar />

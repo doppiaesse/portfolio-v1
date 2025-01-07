@@ -31,7 +31,11 @@
 				title={project.translations[0].title}
 				description={project.translations[0].description}
 				image={project.images[0].directus_files_id}
-				link="/projects/{project.translations[0].name}"
+				link={data.projects[0].translations[0].languages_code +
+					'/' +
+					data.projects[0].translations[0].name +
+					'/' +
+					project.translations[0].name}
 			/>
 		{/each}
 	</div>

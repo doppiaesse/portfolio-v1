@@ -86,6 +86,7 @@ export interface ProjectTranslation {
 	name: string;
 	title: string;
 	description: string;
+	body: BlockEditor;
 	image_captions: string[];
 }
 

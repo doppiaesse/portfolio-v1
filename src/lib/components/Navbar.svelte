@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import MenuClose from './icons/CloseMenu.svelte';
 	import MenuOpen from './icons/OpenMenu.svelte';
 	import { handleAnchorClick, translation } from '$lib/utils';
@@ -16,8 +17,16 @@
 
 <header id="top" class="border-b border-white border-opacity-5">
 	<nav class="flex items-center px-4 sm:px-8 lg:px-14 py-8 justify-between text-3xl font-light">
-		<a href="#top" on:click={handleAnchorClick}>
-			<img class="h-16 sm:h-20" src="logo/logo-light.svg" alt="Simone Salerno logo" />
+		<a
+			href={$page.url.pathname.split('/')[2] ? '/' : '#top'}
+			on:click={handleAnchorClick}
+			aria-label="Simone Salerno"
+		>
+			<enhanced:img
+				class="h-16 sm:h-20 w-min"
+				src="/src/lib/assets/logo/logo-light.svg"
+				alt="Logo"
+			/>
 		</a>
 
 		<div class="hidden md:flex gap-x-7">

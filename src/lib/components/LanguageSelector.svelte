@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { languages, selectedLanguage } from '$lib/utils';
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
@@ -13,6 +14,12 @@
 		if (event.target.closest('#menu-button') === null) {
 			isOpen = false;
 		}
+	}
+
+	function buildLanguageUrl(languageCode: string): string {
+		const currentPath = $page.url.pathname.split('/');
+		const subpage = currentPath[2] ? '/' + currentPath[2] : '';
+		return '/' + languageCode + subpage;
 	}
 
 	onMount(() => {
@@ -71,7 +78,7 @@
 					{#if selected !== language.code}
 						<a
 							data-sveltekit-reload
-							href="/{language.code}"
+							href={buildLanguageUrl(language.code)}
 							class="block px-4 py-2 text-sm"
 							role="menuitem"
 						>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { handleAnchorClick, translation } from '$lib/utils';
 	import { get } from 'svelte/store';
 	import { fade } from 'svelte/transition';
@@ -26,8 +27,13 @@
 			<div
 				class="flex border border-white border-opacity-5 rounded-s-full rounded-e-none sm:rounded-full items-center justify-between text-lg font-light backdrop-blur-md bg-white bg-opacity-[0.01] sm:bg-opacity-[0.02] ps-8 pe-[calc(0.95rem+5vw)] sm:px-4"
 			>
-				<a href="#top" class="me-4 sm:px-3 pb-4 pt-[0.95rem]" on:click={handleAnchorClick}>
-					<img class="h-10" src="logo/logo-light.svg" alt="Simone Salerno logo" />
+				<a
+					href={$page.url.pathname.split('/')[2] ? '/' : '#top'}
+					class="me-4 sm:px-3 pb-4 pt-[0.95rem]"
+					on:click={handleAnchorClick}
+					aria-label="Logo"
+				>
+					<enhanced:img class="h-10 w-min" src="/src/lib/assets/logo/logo-light.svg" alt="Logo" />
 				</a>
 
 				{#each data.global.navigation as route (route.name)}

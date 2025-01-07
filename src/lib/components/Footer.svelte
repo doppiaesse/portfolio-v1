@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { handleAnchorClick, translation } from '$lib/utils';
 	import { get } from 'svelte/store';
 
@@ -9,8 +10,16 @@
 	<nav
 		class="flex items-start py-8 sm:pt-10 sm:pb-8 justify-between text-xl sm:text-2xl font-light"
 	>
-		<a href="#top" on:click={handleAnchorClick}>
-			<img class="h-16 sm:h-20" src="logo/logo-light.svg" alt="Simone Salerno logo" />
+		<a
+			href={$page.url.pathname.split('/')[2] ? '/' : '#top'}
+			on:click={handleAnchorClick}
+			aria-label="Logo"
+		>
+			<enhanced:img
+				class="h-16 sm:h-20 w-min"
+				src="/src/lib/assets/logo/logo-light.svg"
+				alt="Logo"
+			/>
 		</a>
 
 		<div class="flex flex-col md:flex-row gap-x-7 opacity-80">
