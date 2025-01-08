@@ -2,7 +2,7 @@
 	import { inview, type Options } from 'svelte-inview';
 	import { get } from 'svelte/store';
 	import { translation } from '$lib/utils';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	let isInView: boolean;
 	const options: Options = {
@@ -13,7 +13,7 @@
 	const data = get(translation);
 
 	const project = data.projects.find(
-		(project) => project.translations[0].name === $page.url.pathname.split('/')[3]
+		(project) => project.translations[0].name === page.url.pathname.split('/')[3]
 	);
 </script>
 
@@ -25,6 +25,23 @@
 	}}
 	class={isInView ? 'animate' : 'opacity-0'}
 >
+	<div class="flex pb-8 sm:pb-10 2xl:pb-14 text-2xl">
+		<a href="/" class="flex items-center gap-x-1">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				style="fill: #f3f4f6;transform: ;msFilter:;margin-bottom: -0.2rem;"
+				><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+				></path></svg
+			>
+			<span class="hover:underline"
+				>{data.global.interface.find((item) => item.name === 'back')?.value}</span
+			>
+		</a>
+	</div>
+
 	{#if project}
 		<div class="flex gap-x-14">
 			<div class="w-2/5">

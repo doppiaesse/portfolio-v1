@@ -21,6 +21,11 @@ export interface LinkItem {
 	link: string;
 }
 
+export interface InterfaceItem {
+	name: string;
+	value: string;
+}
+
 export interface GlobalTranslation {
 	id: number;
 	global_id: number;
@@ -29,6 +34,7 @@ export interface GlobalTranslation {
 	description: string;
 	keywords: string[];
 	navigation: LinkItem[];
+	interface: InterfaceItem[];
 }
 
 export interface Global {
@@ -110,3 +116,8 @@ export interface Page {
 	priority: number;
 	hreflang: string;
 }
+
+// Pages map
+export type PageMap = {
+	[key: string]: { [key: string]: string };
+};

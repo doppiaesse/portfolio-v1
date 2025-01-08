@@ -10,6 +10,6 @@
 	<title>Simone Salerno - {data.projects[0].translations[0].title}</title>
 </svelte:head>
 
-<div class="px-4 sm:px-8 lg:px-14 pt-20 pb-24 sm:pt-24 sm:pb-36 2xl:pt-28 2xl:pb-44">
+<div class="px-4 sm:px-8 lg:px-14 pt-8 pb-28 sm:pt-10 sm:pb-40 2xl:pt-14 2xl:pb-48">
 	<Project />
 </div>

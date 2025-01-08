@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import { languages, selectedLanguage } from '$lib/utils';
+	import { page } from '$app/state';
+	import { languages, pages, selectedLanguage } from '$lib/utils';
+	import type { PageMap } from '$lib/utils/types';
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
 	import { fade, fly } from 'svelte/transition';
@@ -17,9 +18,22 @@
 	}
 
 	function buildLanguageUrl(languageCode: string): string {
-		const currentPath = $page.url.pathname.split('/');
-		const subpage = currentPath[2] ? '/' + currentPath[2] : '';
-		return '/' + languageCode + subpage;
+		const currentPath = page.url.pathname.split('/');
+		const currentLanguage = currentPath[1];
+		const subpage = currentPath[2];
+
+		const currentSubpageKey = Object.keys(pages[currentLanguage] as PageMap[string]).find(
+			(key) => pages[currentLanguage][key] === subpage
+		);
+		const targetSubpage = pages[languageCode][currentSubpageKey as string] || '';
+
+		return (
+			'/' +
+			languageCode +
+			'/' +
+			targetSubpage +
+			(currentPath.slice(3).length ? '/' + currentPath.slice(3).join('/') : '')
+		);
 	}
 
 	onMount(() => {
@@ -41,7 +55,7 @@
 			id="menu-button"
 			aria-expanded={isOpen}
 			aria-haspopup="true"
-			on:click={toggleDropdown}
+			onclick={toggleDropdown}
 		>
 			{#each data as language}
 				{#if selected === language.code}

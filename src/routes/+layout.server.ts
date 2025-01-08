@@ -13,9 +13,10 @@ import type {
 	Contact,
 	Project
 } from '$lib/utils/types';
+import { pages } from '$lib/utils';
 
 export const load = (async ({
-	params
+	url
 }): Promise<{
 	selectedLanguage: string;
 	languages: Language[];
@@ -26,7 +27,8 @@ export const load = (async ({
 	contact: ContactTranslation;
 }> => {
 	const directus = getDirectusInstance(fetch);
-	const languageCode = ['it', 'progetti'].includes(params.page || '') ? 'it' : 'en';
+	const languageCode = url.pathname.split('/')[1];
+	const isLanguageCodeValid = Object.keys(pages).includes(languageCode);
 	const languages = await directus.request<Language[]>(readItems('languages'));
 
 	const global = await directus.request<Global>(
@@ -36,7 +38,7 @@ export const load = (async ({
 					_filter: {
 						_and: [
 							{
-								languages_code: { _eq: languageCode }
+								languages_code: { _eq: isLanguageCodeValid ? languageCode : 'en' }
 							}
 						]
 					}
@@ -54,7 +56,7 @@ export const load = (async ({
 					_filter: {
 						_and: [
 							{
-								languages_code: { _eq: languageCode }
+								languages_code: { _eq: isLanguageCodeValid ? languageCode : 'en' }
 							}
 						]
 					}
@@ -72,7 +74,7 @@ export const load = (async ({
 					_filter: {
 						_and: [
 							{
-								languages_code: { _eq: languageCode }
+								languages_code: { _eq: isLanguageCodeValid ? languageCode : 'en' }
 							}
 						]
 					}
@@ -89,7 +91,7 @@ export const load = (async ({
 					_filter: {
 						_and: [
 							{
-								languages_code: { _eq: languageCode }
+								languages_code: { _eq: isLanguageCodeValid ? languageCode : 'en' }
 							}
 						]
 					}
@@ -107,7 +109,7 @@ export const load = (async ({
 					_filter: {
 						_and: [
 							{
-								languages_code: { _eq: languageCode }
+								languages_code: { _eq: isLanguageCodeValid ? languageCode : 'en' }
 							}
 						]
 					}
@@ -119,7 +121,7 @@ export const load = (async ({
 	);
 
 	return {
-		selectedLanguage: languageCode,
+		selectedLanguage: isLanguageCodeValid ? languageCode : 'en',
 		languages,
 		global: global.translations[0],
 		welcome: welcome.translations[0],

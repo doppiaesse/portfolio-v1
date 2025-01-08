@@ -1,9 +1,7 @@
-import { get, writable } from 'svelte/store';
-import type { Language, Translation } from './types';
-import { goto } from '$app/navigation';
+import { writable } from 'svelte/store';
+import type { Language, Translation, PageMap } from './types';
 
 export function handleAnchorClick(event: MouseEvent) {
-	event.preventDefault();
 	const link = event.currentTarget as HTMLAnchorElement;
 	const anchorId = new URL(link.href).hash;
 
@@ -12,13 +10,13 @@ export function handleAnchorClick(event: MouseEvent) {
 		const anchor = document.getElementById(id);
 
 		if (anchor) {
+			event.preventDefault();
+
 			window.scrollTo({
 				top: anchor.offsetTop - calculateOffset(id),
 				behavior: 'smooth'
 			});
 		}
-	} else {
-		goto(link.href);
 	}
 }
 
@@ -32,13 +30,10 @@ export function calculateOffset(anchorId: string): number {
 	return offsets[anchorId] || 50;
 }
 
-export const pages = {
-	'it': [
-		'progetti',
-	],
-	'en': [
-		'projects',
-	],
+// Pages map
+export const pages: PageMap = {
+	en: { projects: 'projects', about: 'about' },
+	it: { projects: 'progetti', about: 'informazioni' }
 };
 
 export const menuStatus = writable(false);

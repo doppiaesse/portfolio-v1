@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { LayoutData } from './$types';
 	import { browser } from '$app/environment';
 	import { languages, menuStatus, selectedLanguage, translation } from '$lib/utils';
 	import Navbar from '$lib/components/Navbar.svelte';
@@ -7,7 +6,8 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import '$lib/style/globals.css';
 
-	export let data: LayoutData;
+	let { children, data } = $props();
+
 	selectedLanguage.set(data.selectedLanguage);
 	languages.set(data.languages);
 	translation.set({
@@ -18,10 +18,12 @@
 		contact: data.contact
 	});
 
-	$: if (browser) {
-		document.documentElement.classList.toggle('overflow-hidden', $menuStatus);
-		document.documentElement.classList.toggle('sm:overflow-auto', $menuStatus);
-	}
+	$effect(() => {
+		if (browser) {
+			document.documentElement.classList.toggle('overflow-hidden', $menuStatus);
+			document.documentElement.classList.toggle('sm:overflow-auto', $menuStatus);
+		}
+	});
 </script>
 
 <svelte:head>
@@ -34,7 +36,7 @@
 	<Navbar />
 	<FloatingNav />
 
-	<slot />
+	{@render children()}
 
 	<Footer />
 </div>
