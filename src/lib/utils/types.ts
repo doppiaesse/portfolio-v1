@@ -99,6 +99,7 @@ export interface ProjectTranslation {
 export interface Project {
 	images: ProjectImage[];
 	translations: ProjectTranslation[];
+	link: string;
 }
 
 export interface Translation {

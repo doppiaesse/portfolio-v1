@@ -80,7 +80,7 @@ export const load = (async ({
 					}
 				}
 			},
-			fields: [{ images: ['*'], translations: ['*'] }]
+			fields: [{ images: ['*'], translations: ['*'] }, 'link']
 		})
 	);
 

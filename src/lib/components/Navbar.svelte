@@ -32,12 +32,14 @@
 			<Logo />
 		</a>
 
-		<div class="hidden md:flex gap-x-7 text-[1.7rem]">
+		<div
+			class="hidden md:flex gap-x-6 lg:gap-x-7 items-center text-[1.3rem] lg:text-[1.5rem] 2xl:text-[1.7rem]"
+		>
 			{#each data.global.navigation as route (route.name)}
 				<a href={'/' + language + route.link} onclick={handleAnchorClick}>{route.name}</a>
 			{/each}
 
-			<div class="ms-2 -mt-[0.2rem]">
+			<div class="2xl:ms-2">
 				<LanguageSelector />
 			</div>
 		</div>

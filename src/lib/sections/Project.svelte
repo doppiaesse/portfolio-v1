@@ -3,6 +3,7 @@
 	import { get } from 'svelte/store';
 	import { translation } from '$lib/utils';
 	import { page } from '$app/state';
+	import Link from '$lib/components/icons/Link.svelte';
 
 	let isInView: boolean;
 	const options: Options = {
@@ -15,6 +16,8 @@
 	const project = data.projects.find(
 		(project) => project.translations[0].name === page.url.pathname.split('/')[3]
 	);
+
+	console.log(project);
 </script>
 
 <div
@@ -61,9 +64,16 @@
 				</h2>
 
 				{#if project.translations[0].description}
-					<div class="text-2xl italic mb-2">
+					<div class="text-2xl italic">
 						<p>{project.translations[0].description}</p>
 					</div>
+				{/if}
+
+				{#if project.link}
+					<a href={project.link} class="flex items-center gap-x-2 text-2xl underline">
+						<span class="-mb-[0.2rem]"><Link /></span>
+						{project.link}
+					</a>
 				{/if}
 
 				{#if project.translations[0].body}
