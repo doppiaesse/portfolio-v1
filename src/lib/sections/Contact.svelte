@@ -38,7 +38,10 @@
 				target="_blank"
 			>
 				<span
-					class="bg-left-bottom bg-gradient-to-r from-gray-300 to-gray-300 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+					class="bg-left-bottom bg-gradient-to-r from-gray-300 to-gray-300 bg-no-repeat transition-all duration-500 ease-out {index ===
+					0
+						? 'bg-[length:0%_2px] group-hover:bg-[length:100%_2px]'
+						: 'bg-[length:0%_1px] group-hover:bg-[length:100%_1px]'}"
 				>
 					{link.name}
 				</span>

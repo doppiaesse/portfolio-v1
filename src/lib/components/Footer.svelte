@@ -37,6 +37,6 @@
 	<div
 		class="flex items-center justify-between text-md sm:text-lg text-neutral-200 font-light pt-2 pb-7 opacity-70"
 	>
-		Copyright © 2023-2024 - Simone Salerno
+		Copyright © 2025 - Simone Salerno
 	</div>
 </footer>
