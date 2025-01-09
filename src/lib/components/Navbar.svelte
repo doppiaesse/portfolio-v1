@@ -44,7 +44,7 @@
 
 		<div class="flex md:hidden w-[40px] h-[40px]">
 			{#if $menuStatus}
-				<div class="fixed z-20 left-6 top-8">
+				<div class="fixed z-20 left-7 top-10" transition:fade={{ duration: 300 }}>
 					<LanguageSelector />
 				</div>
 
