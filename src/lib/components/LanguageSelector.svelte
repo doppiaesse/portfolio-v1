@@ -51,7 +51,7 @@
 	<div>
 		<button
 			type="button"
-			class="flex justify-center gap-x-1.5 rounded-md w-16 py-3 text-base border border-white border-opacity-5"
+			class="flex justify-center gap-x-1.5 rounded-md w-16 py-3 text-base border border-white border-opacity-5 bg-white bg-opacity-[0.02] backdrop-blur-md"
 			id="menu-button"
 			aria-expanded={isOpen}
 			aria-haspopup="true"
@@ -81,7 +81,7 @@
 		<div
 			in:fly={{ y: -10, duration: 100 }}
 			out:fade={{ duration: 100 }}
-			class="absolute right-0 z-10 mt-1 w-16 origin-top-right text-base rounded-md border border-white border-opacity-5 bg-dark"
+			class="absolute right-0 z-10 mt-1 w-16 origin-top-right text-base rounded-md border border-white border-opacity-5 bg-white bg-opacity-[0.02] backdrop-blur-md"
 			role="menu"
 			aria-orientation="vertical"
 			aria-labelledby="menu-button"

@@ -27,7 +27,7 @@
 	>
 		<nav class="bg-neutral-900 bg-opacity-20 rounded-s-full rounded-e-none sm:rounded-full">
 			<div
-				class="flex border border-white border-opacity-5 rounded-s-full rounded-e-none sm:rounded-full items-center justify-between text-lg font-light backdrop-blur-md bg-white bg-opacity-[0.01] sm:bg-opacity-[0.02] ps-8 pe-[calc(0.95rem+5vw)] sm:px-4"
+				class="flex border border-white border-opacity-5 rounded-s-full rounded-e-none sm:rounded-full items-center justify-between text-lg backdrop-blur-md bg-white bg-opacity-[0.01] sm:bg-opacity-[0.02] ps-8 pe-[calc(0.95rem+5vw)] sm:px-4"
 			>
 				<a
 					href={page.url.pathname.split('/')[2]
@@ -39,7 +39,7 @@
 					onclick={handleAnchorClick}
 					aria-label="Logo"
 				>
-					<enhanced:img class="h-10 w-min" src="/src/lib/assets/logo/logo-light.svg" alt="Logo" />
+					<enhanced:img class="h-10 w-min" src="/src/lib/assets//logo/logo.png" alt="Logo" />
 				</a>
 
 				{#each data.global.navigation as route (route.name)}

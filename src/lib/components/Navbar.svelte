@@ -7,6 +7,7 @@
 	import { fade } from 'svelte/transition';
 	import { menuStatus } from '$lib/utils';
 	import LanguageSelector from './LanguageSelector.svelte';
+	import Logo from './Logo.svelte';
 
 	function handleMenuClick() {
 		menuStatus.update((value) => !value);
@@ -18,7 +19,7 @@
 </script>
 
 <header id="top" class="border-b border-white border-opacity-5">
-	<nav class="flex items-center px-4 sm:px-8 lg:px-14 py-8 justify-between text-3xl font-light">
+	<nav class="flex items-center px-4 sm:px-8 lg:px-14 py-8 justify-between">
 		<a
 			href={page.url.pathname.split('/')[2]
 				? '/' + language
@@ -28,21 +29,15 @@
 			onclick={handleAnchorClick}
 			aria-label="Simone Salerno"
 		>
-			<enhanced:img
-				class="h-16 sm:h-20 w-min"
-				src="/src/lib/assets/logo/logo-light.svg"
-				alt="Logo"
-			/>
+			<Logo />
 		</a>
 
-		<div class="hidden md:flex gap-x-7">
+		<div class="hidden md:flex gap-x-7 text-[1.7rem]">
 			{#each data.global.navigation as route (route.name)}
-				<a class="leading-normal" href={'/' + language + route.link} onclick={handleAnchorClick}
-					>{route.name}</a
-				>
+				<a href={'/' + language + route.link} onclick={handleAnchorClick}>{route.name}</a>
 			{/each}
 
-			<div class="ms-2">
+			<div class="ms-2 -mt-[0.2rem]">
 				<LanguageSelector />
 			</div>
 		</div>
@@ -58,7 +53,7 @@
 				</button>
 
 				<div
-					class="fixed top-0 left-0 w-screen h-screen z-10 flex flex-col items-center justify-center bg-nav-mobile"
+					class="fixed top-0 left-0 w-screen h-screen z-10 flex flex-col items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm text-2xl"
 					transition:fade={{ duration: 300 }}
 				>
 					<div class="flex flex-col gap-y-3">

@@ -14,12 +14,12 @@
 </script>
 
 <svelte:head>
-	<title>Simone Salerno - {data.global.title}</title>
+	<title>Simone Salerno • {data.global.title}</title>
 </svelte:head>
 
 <div
 	id="top"
-	class="flex items-center border-b border-white border-opacity-5 px-4 sm:px-8 lg:px-14 min-h-[80vh]"
+	class="flex items-center justify-center border-b border-white border-opacity-5 px-4 sm:px-8 lg:px-14 min-h-[80vh]"
 >
 	<WelcomeSection />
 </div>

@@ -43,8 +43,8 @@
 	</div>
 
 	{#if project}
-		<div class="flex gap-x-14">
-			<div class="w-2/5">
+		<div class="flex flex-col xl:flex-row gap-y-6 xl:gap-x-14">
+			<div class="w-full xl:w-1/2">
 				<img
 					class="rounded-3xl w-full h-full object-cover"
 					src={'https://directus.simonesalerno.it/assets/' +
@@ -55,7 +55,7 @@
 					alt={project.translations[0].title}
 				/>
 			</div>
-			<div class="flex flex-col gap-y-6 w-3/5">
+			<div class="flex flex-col gap-y-6 w-full xl:w-1/2">
 				<h2 class="text-5xl font-normal sm:text-6xl 2xl:text-7xl">
 					{project.translations[0].title}
 				</h2>

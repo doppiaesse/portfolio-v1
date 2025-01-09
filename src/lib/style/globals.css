@@ -3,37 +3,31 @@
 @tailwind utilities;
 
 html {
-	@apply bg-dark text-gray-100 font-light overflow-x-hidden;
-	font-family: 'IBM Plex Sans', sans-serif;
+	@apply text-gray-100 overflow-x-hidden;
+	font-family: 'Geist', serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-a,
-button {
-	font-family: 'IBM Plex Sans Condensed', sans-serif;
+body {
+	background:
+		radial-gradient(at 0% 90.67755657300366%, #20327e 0px, transparent 50%),
+		radial-gradient(at 96.57261361190224% 2.618933494998769%, #131b49 0px, transparent 50%),
+		radial-gradient(at 46.12884622549344% 45.14656319433538%, #000000 0px, transparent 50%) #0c0c0c;
 }
 
-.bg-dark {
-	background-color: rgb(18 18 18);
-}
-
-.bg-nav-mobile {
-	background-color: rgba(18, 18, 18, 0.98);
-}
-
-.typewriter {
-	--cursor-color: rgb(249 250 251 / var(--tw-text-opacity));
-	--cursor-width: 0.5rem;
-}
-
-.typing::after {
-	vertical-align: sub !important;
-	margin-left: 0.4rem;
-	margin-bottom: 0.2rem;
+body::before {
+	content: '';
+	display: block;
+	position: fixed;
+	z-index: -1;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent url('https://assets.codepen.io/108082/Noise.png') 0 0;
+	background-size: 320px 320px;
+	opacity: 0.6;
 }
 
 ::-webkit-scrollbar {
@@ -62,5 +56,18 @@ button {
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+.slide-in {
+	animation: slideIn 0.45s ease-out;
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateY(70%);
+	}
+	to {
+		transform: translateY(0);
 	}
 }
