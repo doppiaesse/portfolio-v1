@@ -11,6 +11,7 @@
 	>
 		<a href={link}>
 			<img
+				loading="lazy"
 				class="rounded-t-3xl"
 				src="https://directus.simonesalerno.it/assets/{image}/{title}.jpg"
 				alt={title}

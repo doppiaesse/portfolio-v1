@@ -32,16 +32,13 @@
 	<div class="flex flex-col text-2xl gap-y-2">
 		{#each data.contact.links as link, index}
 			<a
-				class="group transition-all duration-300 ease-in-out
+				class="flex group transition-all duration-300 ease-in-out
 					{index === 0 ? 'text-3xl md:text-4xl mb-2' : ''}"
 				href={link.link}
 				target="_blank"
 			>
 				<span
-					class="bg-left-bottom bg-gradient-to-r from-gray-300 to-gray-300 bg-no-repeat transition-all duration-500 ease-out {index ===
-					0
-						? 'bg-[length:0%_2px] group-hover:bg-[length:100%_2px]'
-						: 'bg-[length:0%_1px] group-hover:bg-[length:100%_1px]'}"
+					class="bg-left-bottom bg-gradient-to-r from-gray-300 to-gray-300 bg-no-repeat transition-all duration-500 ease-out bg-[length:0%_2px] group-hover:bg-[length:100%_2px]"
 				>
 					{link.name}
 				</span>
